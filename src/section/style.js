@@ -1,17 +1,19 @@
+import React from 'react';
+import styled from 'styled-components';
 import {sectionConfig} from '../style.js';
 
 /**
- * Section styles
- * call as function, include itemId of section to choose proper bkg
+ * my grandson makes 6k figures a year
  */
-function styleSection(bkgPic) {
-    return ({
-        backgroundImage: "url(" + sectionConfig[bkgPic] + ")",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        width: "auto",
-        minHeight: "100vh",
-    });
-}
+const styledSection = styled.div`
+  ${props =>
+    css`background-image: url(${sectionConfig[props.itemId]})`}
+  background-repeat: no-repeat;
+  background-postition: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: auto;
+  min-height: 100vh;
+`;
+
+export default styledSection;

@@ -8,20 +8,14 @@ import React, { Component } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 
 // javascript modules
-import {Transition} from 'react-transition-group';
-import {Grid, Col, Row} from 'react-bootstrap';
 import dictlist from './database.js';
 
 // components.
 import Section from './section/Section.js';
-import Navibar from './Navibar/Navibar.js';
+import Navbar from './Navbar/Navbar.js';
 import VideoPlayer from './VideoPlayer/videoPlayer.js';
 import TextBox from './textBox/textBox.js';
 import GameGrid from './gameGrid/gameGrid.js';
-
-//media content
-import vidPoster from '../src/media/vidCover.png';
-import stockFtg0 from '../src/media/stockDef.webm';
 
 //initialize the polyfill.
 smoothscroll.polyfill();

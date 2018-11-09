@@ -1,29 +1,26 @@
 import {videoPlayerConf} from '../style.js';
-
+import styled from 'styled-components';
 
 /**
- * style for the VideoPlayer component.
- * includes the video and poster, which must be provided in the general
- * style of the app.
- * @author Luis Chavarriaga
+ * same thing as above but with styled-components.
  */
-const videoStyle = {
-    videoStyle: {
-        position: "fixed",
-        top: "50%",
-        left: "50%",
-        minWidth: "100%",
-        minHeight: "100%",
-        width: "auto",
-        height: "auto",
-        zIndex: "-100",
-        transform: "translateX(-50%) translateY(-50%)",
-        backgroundSize: "cover",
-    },
-    config: {
-        poster: videoPlayerConf.poster,
-        video: videoPlayerConf.video,
-    },
+const styledVideo = styled.video`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100%;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+`;
+
+
+const videoConfig = {
+  poster: videoPlayerConf.poster,
+  video: videoPlayerConf.video,
 };
 
-export default videoStyle;
+export {videoStyle, styledVideo, videoConfig};

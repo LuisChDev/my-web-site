@@ -1,12 +1,15 @@
-import textBoxStyle from 'style.js';
+import React from 'react';
+import styledTextBox from 'style.js';
 
 //these text boxes are generic i guess
 const TextBox = (props) => {
-    return (
-        <div style={textBoxStyle}>
-        <p>{props.children}</p>
-        </div>
-    );
+  return (
+    <styledTextBox margin={props.margin}
+                   float={props.float}
+                   maxWidth={props.maxWidth}>
+      <p>{props.children}</p>
+    </styledTextBox>
+  );
 };
 
 TextBox.defaultProps = {

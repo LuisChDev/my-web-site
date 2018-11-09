@@ -1,17 +1,16 @@
 import React from 'react';
-import styleSection from 'style.js';
+import styledSection from 'style.js';
 
 /**
  * Each section of the page. Static background.
  *
  */
 const Section = (props) => {
-    return (
-        <div style={styleSection(props.itemId)}
-        id={props.itemId}>
-       {props.children}
-        </div>
-    );
+  return (
+    <styledSection id={props.itemId}>
+      {props.children}
+    </styledSection>
+  );
 };
 
 export default Section;
