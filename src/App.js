@@ -6,6 +6,7 @@
  */
 import React, { Component } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
+import styled from 'styled-components';
 
 // javascript modules
 import dictlist from './database.js';
@@ -15,37 +16,27 @@ import Section from './section/Section.js';
 import Navbar from './Navbar/Navbar.js';
 import VideoPlayer from './VideoPlayer/videoPlayer.js';
 import TextBox from './textBox/textBox.js';
-import GameGrid from './gameGrid/gameGrid.js';
+
+// styles.
+import {sections} from './style.js';
+import './try.css';
 
 //initialize the polyfill.
 smoothscroll.polyfill();
 
 /**
- * takes a list, the indexes of two elements, and returns the list with
- * said elements changing places.
- * @param {Array} list - the list to be changed.
- * @param {int} first - index of first element.
- * @param {int} second - index of second element.
- * @returns {Array} The list with the swapped elements.
+ * Main app element with all the components in place.
  */
-function listSwap(list, first, second) {
-  return list.slice(0, first) + list[second] + list.slice(first + 1, second)
-    + list[first] + list.slice(second + 1);
-}
-
-
-/* Main app structure with all the elements in place */
 class App extends Component {
-
   render() {
     return (
       <div>
-        <Navibar
-          sections={["home", "skills", "projects", "contact"]}/>
+        <Navbar
+          items={[...sections]}/>
         {/*welcome screen*/}
         <Section itemId="home">
-          <VideoPlayer poster={vidPoster}
-            video={stockFtg0}/>
+          <VideoPlayer/>
+          {/*<VideoPlayer/>*/}
           <TextBox float="right"
             margin="12vh 5vw"
             maxWidth="25vw">
@@ -53,15 +44,16 @@ class App extends Component {
         </Section>
         {/* skills section */}
         <Section itemId="skills">
-          <GameGrid/>
+          {/*<GameGrid/>*/}
+          hello
         </Section>
         {/*projects section*/}
         <Section itemId="projects">
-
+          it's me
         </Section>
         {/*contact me section*/}
         <Section itemId="contact">
-
+          i know its been a while
         </Section>
       </div>
     );

@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components';
 /**
  * styled box.
  */
-const styledTextBox = styled.div`
+const StyledTextBox = styled.div`
   background: rgba(255,255,255,0.5);
   padding: 15px;
   font-size: large;
@@ -16,4 +16,4 @@ const styledTextBox = styled.div`
     css`max-width: ${props.maxWidth}`};
 `;
 
-export default styledTextBox;
+export default StyledTextBox;

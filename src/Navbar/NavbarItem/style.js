@@ -3,17 +3,17 @@ import styled, {css} from 'styled-components';
 /**
  * styled li for the navbar.
  */
-const styledNavbarItem = styled.li`
+const StyledNavbarItem = styled.li`
   font-weight: bold;
   float: left;
   ${props =>
-    props.isActiveKey && css`text-decoration: underline-red;`}
+    props.isactivekey && css`text-decoration: underline-red;`}
 `;
 
 /**
  * the styled link
  */
-const styledNavbarLink = styled.a`
+const StyledNavbarLink = styled.a`
   display: block;
   padding: 8px;
   background-color: #dddddd;
@@ -22,5 +22,4 @@ const styledNavbarLink = styled.a`
   }
 `;
 
-
-export {styledNavbarItem, styledNavbarLink};
+export {StyledNavbarItem, StyledNavbarLink};

@@ -13,7 +13,7 @@ class Game extends Component {
       time: 0,
       yoshiCoinCount: 0,
       isPaused: false,
-    }
+    };
   }
 
   addCoin() {
@@ -25,7 +25,7 @@ class Game extends Component {
     } else {
       this.setState({
         coinCount: this.state.coinCount + 1,
-      })
+      });
     }
   }
 
@@ -33,34 +33,34 @@ class Game extends Component {
     if (this.state.lifecount < 99) {
       this.setstate({
         lifecount: this.state.lifeCount + 1,
-      })
+      });
     }
   }
 
   decLife() {
-    if (this.state.lifecount < 99) {
+    if (this.state.lifecount > 0) {
       this.setstate({
         lifecount: this.state.lifeCount - 1,
-      })
+      });
     }
   }
 
   addScore(points) {
     this.setState({
       score: this.state.score + points,
-    })
+    });
   }
 
   updateClock() {
     this.setState({
       time: this.state.time + 1,
-    })
+    });
   }
 
   pauseGame() {
     this.setState({
       isPaused: !this.state.isPaused,
-    })
+    });
   }
 
   render() {
@@ -68,7 +68,7 @@ class Game extends Component {
       <div>
 
       </div>
-    )
+    );
   }
 
 }

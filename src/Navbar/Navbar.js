@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import styledNavbar from './style.js';
+import StyledNavbar from './style.js';
+import NavbarItem from './NavbarItem/NavbarItem.js';
 import jump from 'jump.js';
 
 /**
@@ -7,12 +8,11 @@ import jump from 'jump.js';
  * will replace the bootstrap one.
  * that way we get rid of the whole library.
  */
-
 class Navbar extends Component {
   constructor() {
     super();
     this.state = {
-      activeKey: 0,
+      activeKey: "home",
     };
   }
 
@@ -30,17 +30,18 @@ class Navbar extends Component {
 
   render() {
     return (
-      <styledNavbar>
+      <StyledNavbar>
         {this
          .props
          .items
-         .map((x, i) =>
-              <NavBarItem text={x.text}
-                          id={i}
-                          isActiveKey={i === this.state.activeKey}
+         .map((x) =>
+              <NavbarItem text={x.text}
+                          key={x.id}
+                          isactivekey={x.id === this.state.activeKey}
                           url={x.url}
-                          onClick={(e) => this.handleClick(i, x.url, e)}/>)}
-      </styledNavbar>
+                          onClick={(e) =>
+                                   this.handleClick(x.id, x.url, e)}/>)}
+      </StyledNavbar>
     );
   }
 }

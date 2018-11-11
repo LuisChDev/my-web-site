@@ -1,14 +1,21 @@
-// This file keeps, for the most part, the background pics for the grid.
+import React from 'react';
+import styled, {css} from 'styled-components';
+import {tileGridConf} from '../../style.js';
 
-const tileStyle = {
-  tableRow: {
-    display: 'table',
-    width: '100%',
-  },
+// terrain backgrounds
 
-  tableCell: {
-    display: 'table-cell',
-    height: '10vh',
-    border: '1px solid #000',
-  },
-};
+const styledRow = styled.div`
+  display: table;
+  width: 100%;
+`;
+
+const styledCell = styled.div`
+  display: table-cell;
+  height: 10vh;
+  border: 1px solid #000;
+  ${props => (props.bkg !== 'air') && css`
+    background-image: ${tileGridConf[props.bkg]};
+  `}
+`;
+
+export {styledRow, styledCell};

@@ -1,5 +1,5 @@
 import React from 'react';
-import styledSection from 'style.js';
+import StyledSection from './style.js';
 
 /**
  * Each section of the page. Static background.
@@ -7,9 +7,9 @@ import styledSection from 'style.js';
  */
 const Section = (props) => {
   return (
-    <styledSection id={props.itemId}>
+    <StyledSection id={props.itemId}>
       {props.children}
-    </styledSection>
+    </StyledSection>
   );
 };
 
