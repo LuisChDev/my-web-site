@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import TileGrid from './TileGrid/TileGrid.js';
+import {Goomba, KoopaTroopa} from './Enemy/Enemy.js';
 
 /**
 * Main logic container of the app. Keeps track of the global variables.
@@ -12,6 +14,7 @@ class Game extends Component {
       score: 0,
       time: 0,
       yoshiCoinCount: 0,
+      enemiesCount: 0,
       isPaused: false,
     };
   }
@@ -72,3 +75,5 @@ class Game extends Component {
   }
 
 }
+
+export default Game;

@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "jump.js": "^1.0.2",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-pose": "^3.3.7",
     "react-redux": "^5.0.7",
     "react-scripts": "2.0.3",
+    "react-test-renderer": "^16.6.1",
     "redux": "^4.0.1",
     "smoothscroll-polyfill": "^0.4.3",
     "styled-components": "^4.0.3"

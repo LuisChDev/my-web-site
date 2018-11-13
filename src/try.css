@@ -1,0 +1,10 @@
+/* sample file for the browser */
+
+div {
+    align: center;
+    display: block;
+}
+
+.navItem {
+    color: red;
+}

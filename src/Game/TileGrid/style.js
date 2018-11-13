@@ -4,12 +4,12 @@ import {tileGridConf} from '../../style.js';
 
 // terrain backgrounds
 
-const styledRow = styled.div`
+const StyledRow = styled.div`
   display: table;
   width: 100%;
 `;
 
-const styledCell = styled.div`
+const StyledCell = styled.div`
   display: table-cell;
   height: 10vh;
   border: 1px solid #000;
@@ -18,4 +18,4 @@ const styledCell = styled.div`
   `}
 `;
 
-export {styledRow, styledCell};
+export {StyledRow, StyledCell};

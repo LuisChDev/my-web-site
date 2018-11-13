@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {styledRow, styledCell} from './style.js';
+import {StyledRow, StyledCell} from './style.js';
 import flatWorldObj from './iniGrid.js';
 
 /**
  * implements a grid of stateless tiles.
  *
  */
-class tileGrid extends Component {
+class TileGrid extends Component {
   constructor() {
     super();
     this.state = {
@@ -21,14 +21,16 @@ class tileGrid extends Component {
          .state
          .matrix
          .map(x =>
-              <styledRow>
+              <StyledRow>
                 {x.map(y =>
-                       <styledCell bkg={y}/>
+                       <StyledCell bkg={y}/>
                        )}
-              </styledRow>
+              </StyledRow>
              )
         }
       </div>
     );
   }
 }
+
+export default TileGrid;
