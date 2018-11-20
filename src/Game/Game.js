@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import TileGrid from './TileGrid/TileGrid.js';
-import {Goomba, KoopaTroopa} from './Enemy/Enemy.js';
 
 /**
 * Main logic container of the app. Keeps track of the global variables.
@@ -18,6 +17,15 @@ class Game extends Component {
       isPaused: false,
     };
   }
+
+  render() {
+    return (
+      <div>
+        <TileGrid />
+      </div>
+    );
+  }
+
 
   addCoin() {
     if (this.state.coinCount === 99) {
@@ -64,14 +72,6 @@ class Game extends Component {
     this.setState({
       isPaused: !this.state.isPaused,
     });
-  }
-
-  render() {
-    return (
-      <div>
-
-      </div>
-    );
   }
 
 }

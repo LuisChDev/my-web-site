@@ -12,10 +12,11 @@ import styled from 'styled-components';
 import dictlist from './database.js';
 
 // components.
-import Section from './section/Section.js';
+import Section from './Section/Section.js';
 import Navbar from './Navbar/Navbar.js';
 import VideoPlayer from './VideoPlayer/videoPlayer.js';
-import TextBox from './textBox/textBox.js';
+import TextBox from './TextBox/textBox.js';
+import Game from './Game/Game.js';
 
 // styles.
 import {sections} from './style.js';
@@ -44,6 +45,7 @@ class App extends Component {
         </Section>
         {/* skills section */}
         <Section itemId="skills">
+          <Game/>
           {/*<GameGrid/>*/}
           hello
         </Section>

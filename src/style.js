@@ -18,6 +18,11 @@ import vid from './media/stockDef.webm';
 import bkGrass from '../src/media/backgrounds/grass.png';
 import bkGround from '../src/media/backgrounds/ground.png';
 
+// source for the sprites
+import sprGoomba from '../src/media/enemies/goomba/SMWEnemies-0-0-00-00.png';
+import sprKoopaTroopa from '../src/media/enemies/koopa/blue/\
+SMWEnemies-00-010.png';
+
 // constants
 const duration = 300;
 
@@ -80,5 +85,10 @@ const tileGridConf = {
   ground: bkGround,
 };
 
+/**
+ * sprites
+ */
 
-export {sectionConf, videoPlayerConf, boxConf, tileGridConf, sections};
+
+export {sectionConf, videoPlayerConf, boxConf, tileGridConf, sections,
+        sprGoomba, sprKoopaTroopa};

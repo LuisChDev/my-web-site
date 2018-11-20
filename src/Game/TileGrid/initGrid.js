@@ -4,6 +4,7 @@ const charTerrainValues = {
   ' ': 'air',
   '-': 'ground',
   '=': 'grass',
+  '#': 'block',
 };
 // 10x30, 7 rows of air, one of grass, two of ground.
 const flatWorld = `

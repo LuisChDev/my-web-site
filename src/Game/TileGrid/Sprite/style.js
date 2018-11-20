@@ -4,7 +4,7 @@ import styled from 'styled-components';
 /**
  * styled box for an enemy.
  */
-const StyledSprite = (comp) => styled(comp)`
+const StyledSprite = styled.div`
   width: ${({width}) => width}px;
   height: ${({height}) => height}px;
   overflow: hidden;
