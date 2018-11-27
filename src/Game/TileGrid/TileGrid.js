@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {StyledRow, StyledCell} from './style.js';
 import worldObj from './initGrid.js';
-import Goomba from './Sprite/Enemy/Goomba/Goomba.js';
-import KoopaTroopa from './Sprite/Enemy/KoopaTroopa/KoopaTroopa.js';
+// import Goomba from './Sprite/Enemy/Goomba/Goomba.js';
+// import KoopaTroopa from './Sprite/Enemy/KoopaTroopa/KoopaTroopa.js';
 
 /**
  * Class that renders the grid together with the entities that live on it.
@@ -12,8 +12,8 @@ class TileGrid extends Component {
     super();
     this.state = {
       grid: worldObj,
-      goombas: [],
-      koopatroopas: [],
+      enemies1: [],
+      enemies2: [],
     };
 
     this.findPose = this.findPose.bind(this);
@@ -22,7 +22,8 @@ class TileGrid extends Component {
      * Thus, we cannot attach a ref to them. However, we can place these
      * references up here on the grid, and forward them down.
      */
-    this.refs = [];
+    this.refs = [...Array(worldObj.length)]
+      .map(x => [...Array(worldObj[0].length)]);
     for (let i = 0; i < worldObj.length; i++) {
       for (let j = 0; j < worldObj[0].length; j++) {
         this.refs[i][j] = React.createRef();

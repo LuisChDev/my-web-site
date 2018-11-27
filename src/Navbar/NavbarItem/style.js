@@ -17,6 +17,7 @@ const StyledNavbarLink = styled.a`
   display: block;
   padding: 8px;
   background-color: #dddddd;
+  font-family: Verdana, Sans-serif;
   :hover {
     background-color: #111;
   }

@@ -1,0 +1,14 @@
+#+NAME: Catalog-diagram
+#+CAPTION: a diagram of the catalog component.
+[[./catalog.png]]
+
+Catalog:
+  state - skill displayed
+  handleClick - setState{activeKey: props(activeKey +- 1)
+                         pose: {y: '0%'}}
+                setTimeout(setState{pose: {y: '-100%'}}
+  Skill:
+    Figure:
+    handleClick - 
+      Cube:
+        [sides]
