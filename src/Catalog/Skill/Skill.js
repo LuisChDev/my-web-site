@@ -9,7 +9,7 @@ const Skill = (props) => {
   return(
     <StyledSkill pose={props.pose}>
         <Picture logo={props.logo}/>
-        <div className="description">
+        <div>
           <h2>{props.name}</h2>
           <p>{props.description}</p>
         </div>

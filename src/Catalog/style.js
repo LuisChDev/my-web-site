@@ -3,8 +3,11 @@ import styled from 'styled-components';
 const StyledCatalog = styled.div`
   margin: 20px;
   padding: 20px;
-  min-width: 50vw;
+  width: 45vw;
   overflow: hidden;
+  border-radius: 10px;
+  border-color: sandybrown;
+  border-width: 5px;
 `;
 
 const StyledButton = styled.button`

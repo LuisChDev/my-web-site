@@ -14,12 +14,12 @@ class Picture extends Component {
     return(
       <CubeWrapper>
         <PosedCube>
-          {[["X", 0, "Z", 12],
-            ["X", 180, "Z", -12],
-            ["Y", 90, "X", 12],
-            ["Y", -90, "X", -12],
-            ["X", 90, "Y", 12],
-            ["X", -90, "Y", -12]].map((x,i) =>
+          {[["X", 0, "Z", 8],
+            ["X", 180, "Z", -8],
+            ["Y", 90, "X", 8],
+            ["Y", -90, "X", -8],
+            ["X", 90, "Y", 8],
+            ["X", -90, "Y", -8]].map((x,i) =>
                                       <StyledFace r={x[0]} rd={x[1]}
                                                   t={x[2]} td={x[3]}
                                                   i={i} logo={logo}/>)}

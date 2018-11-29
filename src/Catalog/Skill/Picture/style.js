@@ -25,14 +25,16 @@ const cubeMotion = keyframes`
   }
 `;
 
+
+// animation: ${cubeMotion} 20s linear infinite;
 /**
  * styles for the cube.
  */
 const PosedCube = styled.div`
   margin: auto;
   position: relative;
-  height: 24vw;
-  width: 24vw;
+  height: 16vw;
+  width: 16vw;
   transform-style: preserve-3d;
   animation: ${cubeMotion} 20s linear infinite;
 `;
@@ -63,7 +65,7 @@ const StyledFace = styled.div`
   ${({logo}) => css`
     background-image: url(${cubeImages[logo]});
   `};
-  background-size: 150px 150px;
+  background-size: 100px 100px;
   background-repeat: no-repeat;
   background-position: center;
   ${props => css`

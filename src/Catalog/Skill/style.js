@@ -7,8 +7,8 @@ import posed from 'react-pose';
  */
 const StyledSkill = styled.div`
   display: block;
-  width: 50vw;
-  min-height: 30vh;
+  width: 45vw;
+  min-height: 20vh;
 
   font-family: Verdana, Sans-serif;
   &:hover {

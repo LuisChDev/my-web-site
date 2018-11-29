@@ -13,7 +13,7 @@ import {skillsDB} from './database.js';
 // components.
 import Section from './Section/Section.js';
 import Navbar from './Navbar/Navbar.js';
-import VideoPlayer from './VideoPlayer/videoPlayer.js';
+import VideoPlayer, {VideoBkg} from './VideoPlayer/videoPlayer.js';
 import TextBox from './TextBox/textBox.js';
 import Game from './Game/Game.js';
 import Catalog from './Catalog/Catalog.js';
@@ -36,6 +36,7 @@ class App extends Component {
         {/*welcome screen*/}
         <Section itemId="home">
           <VideoPlayer/>
+          <VideoBkg/>
           {/*<VideoPlayer/>*/}
           <TextBox float="right"
             margin="12vh 5vw"
