@@ -13,7 +13,7 @@ import {skillsDB} from './database.js';
 // components.
 import Section from './Section/Section.js';
 import Navbar from './Navbar/Navbar.js';
-import VideoPlayer, {VideoBkg} from './VideoPlayer/videoPlayer.js';
+import VideoPlayer from './VideoPlayer/videoPlayer.js';
 import TextBox from './TextBox/textBox.js';
 import Game from './Game/Game.js';
 import Catalog from './Catalog/Catalog.js';
@@ -28,6 +28,7 @@ smoothscroll.polyfill();
  * Main app element with all the components in place.
  */
 class App extends Component {
+
   render() {
     return (
       <div>
@@ -35,8 +36,8 @@ class App extends Component {
           items={[...sections]}/>
         {/*welcome screen*/}
         <Section itemId="home">
-          <VideoPlayer/>
-          <VideoBkg/>
+          <VideoPlayer bkg={false}/>
+          <VideoPlayer bkg/>
           {/*<VideoPlayer/>*/}
           <TextBox float="right"
             margin="12vh 5vw"
@@ -59,6 +60,7 @@ class App extends Component {
       </div>
     );
   }
+
 }
 
 export default App;
