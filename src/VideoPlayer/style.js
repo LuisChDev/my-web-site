@@ -5,12 +5,19 @@ import styled, {css} from 'styled-components';
  * Styles for the video player.
  */
 const StyledVideo = styled.video`
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: ${({bkg}) => bkg?-2:-1};
   width: ${({bkg}) => bkg?"100%":"auto"};
   height: ${({bkg}) => bkg?"auto":"100%"};
-  z-index: ${({bkg}) => bkg?-2:-1};
   ${({bkg}) => bkg && css`
     filter: blur(8px);
-  `}
+    background-size: cover;
+`}
+  ${({bkg}) => !bkg && css`
+    margin: auto;
+`}
 `;
 // top: 50%;
 // left: 50%;
