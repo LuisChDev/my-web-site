@@ -22,7 +22,8 @@ class Picture extends Component {
             ["X", -90, "Y", -8]].map((x,i) =>
                                       <StyledFace r={x[0]} rd={x[1]}
                                                   t={x[2]} td={x[3]}
-                                                  i={i} logo={logo}/>)}
+                                                  i={i} logo={logo}
+                                                  key={i}/>)}
         </PosedCube>
       </CubeWrapper>
     );

@@ -14,25 +14,12 @@ const StyledVideo = styled.video`
   ${({bkg}) => bkg && css`
     filter: blur(8px);
     background-size: cover;
-`}
-  ${({bkg}) => !bkg && css`
-    margin: auto;
-`}
+  `}
+    ${({bkg}) => !bkg && css`
+      margin: auto;
+  `}
 `;
-// top: 50%;
-// left: 50%;
-// position: fixed;
-// width: ${({bkg}) => bkg?"auto":"100%"};
-// height: 100${({bkg}) => bkg?"%":"vh"};
-// z-index: ${({bkg}) => bkg?-2:-1};
-// transform: translateX(-50%) translateY(-50%);
-// background-size: cover;
-// ${({bkg}) => !bkg && css`
-//     background-position: center center;
-//   `}
-// ${({bkg}) => bkg && css`
-//     filter: blur(8px);
-//   `}
+
 const videoConfig = {
   poster: videoPlayerConf.poster,
   video: videoPlayerConf.video,

@@ -16,6 +16,5 @@ const StyledSection = styled.div`
   width: auto;
 `;
 
-//width: auto;
 
 export default StyledSection;

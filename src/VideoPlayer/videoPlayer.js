@@ -22,7 +22,7 @@ class VideoPlayer extends Component {
   render() {
     let {bkg} = this.props;
     return (
-      <StyledVideo itemId={bkg?"bkg":"video"} ref={this.videoRef}
+      <StyledVideo itemID={bkg?"bkg":"video"} ref={this.videoRef}
                    loop muted autoPlay bkg={bkg}
                    poster={videoConfig.poster}>
         <source src={videoConfig.video} type="video/webm"/>

@@ -12,7 +12,7 @@ class Navbar extends Component {
   constructor() {
     super();
     this.state = {
-      activeKey: "home",
+      activeKey: 0,
     };
   }
 
@@ -30,7 +30,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <StyledNavbar>
+      <StyledNavbar itemID="navbar">
         {this
          .props
          .items

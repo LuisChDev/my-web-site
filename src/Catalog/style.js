@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
 const StyledCatalog = styled.div`
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding: 20px;
   width: 45vw;
   overflow: hidden;
   border-radius: 10px;
+  border-style: groove;
   border-color: sandybrown;
   border-width: 5px;
+  min-height: 100vh;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
 `;
 
 const StyledButton = styled.button`

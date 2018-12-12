@@ -41,12 +41,14 @@ class Catalog extends Component {
                 logo={skills[activeKey].logo}
                 pose={pose}
               />
-        <StyledButton onClick={this.handleBack}>
-          Previous
-        </StyledButton>
-        <StyledButton onClick={this.handleForward}>
-          Next
-        </StyledButton>
+        <div>
+          <StyledButton onClick={this.handleBack}>
+            Previous
+          </StyledButton>
+          <StyledButton onClick={this.handleForward}>
+            Next
+          </StyledButton>
+        </div>
       </StyledCatalog>
     );
   }
