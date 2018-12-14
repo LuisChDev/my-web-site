@@ -12,8 +12,8 @@ class Catalog extends Component {
       activeKey: 0,
       pose: "open",
     };
-    this.handleBack = this.handleClick.bind(this, false);
-    this.handleForward = this.handleClick.bind(this, true);
+    this.handleBack = this.handleClick.bind(this, true);
+    this.handleForward = this.handleClick.bind(this, false);
   }
 
   // div that expands on scroll to occupy half the screen, spreading from the
@@ -56,19 +56,28 @@ class Catalog extends Component {
   handleClick(forward) {
     let {skills} = this.props;
     let {activeKey} = this.state;
-    const {curName} = skills[activeKey].name;
+    let curName = skills[activeKey].name;
+
+    // proper modulus funcion since javascript's sucks ass
+    function properMod(modulus, numb) {
+      if (numb >= 0) {
+        return numb%modulus;
+      } else {
+        while(numb < 0) {
+          numb += modulus;
+        } return numb;
+      }
+    }
+
     this.setState({
       pose: "closed",
     });
     setTimeout(() => {
       this.setState({
-        activeKey: skills[(forward? skills
-                   .findIndex((x) => x.name === curName) + 1
-                   :skills
-                           .findIndex((x) => x.name === curName) - 1)],
+        activeKey: properMod(skills.length, activeKey + (forward? 1:-1)),
         pose: "open",
       });
-    }, 300);
+    }, 1000);
   }
 }
 
