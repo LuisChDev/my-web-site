@@ -5,10 +5,10 @@ import Picture from './Picture/Picture.js';
 /**
  * Each individual skill.
  */
-const Skill = ({pose, logo, name, description}) => {
+const Skill = ({pose, logo, name, description, turns}) => {
   return(
     <StyledSkill>
-      <Picture logo={logo} pose={pose}/>
+      <Picture logo={logo} pose={pose} turns={turns}/>
         <div>
           <h2>{name}</h2>
           <p>{description}</p>

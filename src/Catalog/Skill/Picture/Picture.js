@@ -4,10 +4,10 @@ import {StyledCube, StyledFace, CubeWrapper, CubeImg} from './style.js';
 /**
  * this is the component that will be animated with CSS.
  */
-const Picture = ({logo, pose}) => {
+const Picture = ({logo, pose, turns}) => {
     return(
       <CubeWrapper>
-        <StyledCube pose={pose}>
+        <StyledCube pose={pose} turns={turns}>
           {[["X", 0, "Z", 8],
             ["X", 180, "Z", -8],
             ["Y", 90, "X", 8],
