@@ -9,15 +9,15 @@ import styled, {css} from 'styled-components';
 const StyledTextBox = styled.div`
   text-align: justify;
   text-justify: inter-word;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.5);
   color: white;
   padding: 10px;
   font-size: large;
   font-family: Verdana, Sans-serif;
   float: right;
-  width: ${({pane}) => pane?'45vw':'500px'};
-  height: ${({pane}) => pane?'80vh':'auto'};
-  overflow: ${({pane}) => pane?'hidden':'auto'};
+  width: 45vw;
+  height: 80vh;
+  overflow: hidden;
   ${/*navbar offset*/''}
   margin: 50px 20px 20px 20px;
 `;

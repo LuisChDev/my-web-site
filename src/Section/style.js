@@ -9,7 +9,7 @@ const StyledSection = styled.div`
     background-image: url(${sectionConf[props.id]});
   `}
   background-repeat: no-repeat;
-  background-postition: center;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;

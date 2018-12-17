@@ -30,8 +30,16 @@ import gitIcon from './media/git-icon.png';
 import javascriptIcon from './media/javascript-icon.png';
 import pythonIcon from './media/python-icon.png';
 import mysqlIcon from './media/mysql-icon.png';
-import postgresqlIcon from './media/python-icon.png';
+import postgresqlIcon from './media/postgresql-icon.png';
 import reactIcon from './media/react-icon.svg';
+
+// images for the social media buttons
+import githubIcon from './media/github-icon.png';
+import redditIcon from './media/reddit-icon.png';
+import stackOverflowIcon from './media/stackOverflow-icon.png';
+import linkedinIcon from './media/linkedin-icon.png';
+import mailIcon from './media/mail-icon.png';
+import twitterIcon from './media/twitter-icon.png';
 
 // constants
 const duration = 300;
@@ -96,9 +104,28 @@ const tileGridConf = {
 };
 
 /**
- * sprites
+ * array with the images
  */
-
+const socialMediaButtons = [
+  {name: "Reddit",
+   image: redditIcon,
+   link: "https://reddit.com/user/MyName_IsMethos"},
+  {name: "Github",
+   image: githubIcon,
+   link: "https://github.com/MyName-IsMethos"},
+  {name: "Stack Overflow",
+   image: stackOverflowIcon,
+   link: "https://stackoverflow.com/users/7658923/mynameismethos"},
+  {name: "Twitter",
+   image: twitterIcon,
+   link: "https://twitter.com/MyName_IsMethos"},
+  {name: "LinkedIn",
+   image: linkedinIcon,
+   link: "https://www.linkedin.com/in/luis-chavarriaga-95b21a171/"},
+  {name: "Mail me",
+   image: mailIcon,
+   link: "mailto:luischa123@gmail.com"},
+];
 
 /**
  * background for the skills
@@ -126,4 +153,5 @@ const cubeImages = {
  */
 
 export {sectionConf, videoPlayerConf, boxConf, tileGridConf, sections,
-        sprGoomba, sprKoopaTroopa, cubeImages, cubeColors};
+        sprGoomba, sprKoopaTroopa, cubeImages, cubeColors,
+       socialMediaButtons};

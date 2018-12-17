@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import Skill from './Skill/Skill.js';
 import {StyledButton} from './style.js';
