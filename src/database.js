@@ -31,11 +31,11 @@ const skillsDB = [
    logo: "git",
   },
   {name: "PostgreSQL",
-   description: "Perhaps the most comprehensible relational " +
+   description: "Perhaps the most comprehensive relational " +
    "database engine employed in mainstream applications. It complies " +
    "faithfully to the SQL specification, while allowing to easily scale " +
    "up to larger userbases.",
-   logo: "posgresql",
+   logo: "postgresql",
   },
   {name: "MySQL",
    description: "This relational database engine is wildly popular and " +

@@ -25,32 +25,41 @@ const cubeMotion = keyframes`
   }
 `;
 
+const AnimCube = posed.div({
+  grown: { scale: 1.0,
+           rotateX: "270deg",
+           rotateY: "270deg",
+           transition: {
+             scale: {
+               type: "spring", stiffness: 150, damping: 7,
+             },
+             rotateX: {
+               duration: 3000,
+             },
+             rotateY: {
+               duration: 3000,
+             }
+           }},
+  shrunk: { scale: 0.0,
+            rotateX: "0deg",
+            rotateY: "0deg",
+            transition: {
+              duration: 300,
+            }},
+});
 
-// animation: ${cubeMotion} 20s linear infinite;
 /**
  * styles for the cube.
  */
-const PosedCube = styled.div`
+const StyledCube = styled(AnimCube)`
   margin: auto;
   position: relative;
   height: 16vw;
   width: 16vw;
   transform-style: preserve-3d;
-  animation: ${cubeMotion} 20s linear infinite;
 `;
-// const StyledCubeWrap = ({hostRef}) => <StyledCube ref={hostRef}/>;
 
-
-// /**
-//  * container div for the whole cube.
-//  */
-// const PosedCube = posed(StyledCubeWrap)({
-//   rotating: {
-//     rotateX: ({rotatex}) => rotatex,
-//     rotateY: ({rotatey}) => rotatey,
-//   }
-// });
-
+// animation: ${cubeMotion} 20s linear infinite;
 /**
  * each individual face of the cube.
  */
@@ -74,4 +83,4 @@ const StyledFace = styled.div`
   `}
 `;
 
-export {PosedCube, StyledFace, CubeWrapper};
+export {StyledCube, StyledFace, CubeWrapper};

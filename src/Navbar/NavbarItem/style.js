@@ -18,6 +18,7 @@ const StyledNavbarLink = styled.a`
   padding: 8px;
   background-color: #dddddd;
   font-family: Verdana, Sans-serif;
+  transition: 0.3s;
   :hover {
     background-color: #111;
   }

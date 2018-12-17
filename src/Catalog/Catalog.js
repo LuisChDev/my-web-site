@@ -10,10 +10,10 @@ class Catalog extends Component {
     super(props);
     this.state = {
       activeKey: 0,
-      pose: "open",
+      pose: "grown",
     };
-    this.handleBack = this.handleClick.bind(this, true);
-    this.handleForward = this.handleClick.bind(this, false);
+    this.handleBack = this.handleClick.bind(this, false);
+    this.handleForward = this.handleClick.bind(this, true);
   }
 
   // div that expands on scroll to occupy half the screen, spreading from the
@@ -56,7 +56,6 @@ class Catalog extends Component {
   handleClick(forward) {
     let {skills} = this.props;
     let {activeKey} = this.state;
-    let curName = skills[activeKey].name;
 
     // proper modulus funcion since javascript's sucks ass
     function properMod(modulus, numb) {
@@ -70,14 +69,14 @@ class Catalog extends Component {
     }
 
     this.setState({
-      pose: "closed",
+      pose: "shrunk",
     });
     setTimeout(() => {
       this.setState({
         activeKey: properMod(skills.length, activeKey + (forward? 1:-1)),
-        pose: "open",
+        pose: "grown",
       });
-    }, 1000);
+    }, 300);
   }
 }
 

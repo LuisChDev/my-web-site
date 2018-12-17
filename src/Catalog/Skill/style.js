@@ -15,23 +15,6 @@ const StyledSkill = styled.div`
   width: 45vw;
   min-height: 20vh;
   font-family: Verdana, Sans-serif;
-  &:hover {
-    border: yellow;
-  }
 `;
-// const CssWrap = ({hostRef}) => <CssSkill ref={hostRef}/>;
-
-// /**
-//  * styling and animation of the items.
-//  */
-// const StyledSkill = posed(CssWrap)({
-//   closed: {
-//     opacity: 0,
-//   },
-//   open: {
-//     opacity: 1,
-//   },
-// });
-
 
 export default StyledSkill;
