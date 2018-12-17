@@ -11,6 +11,7 @@ class Catalog extends Component {
     this.state = {
       activeKey: 0,
       pose: "grown",
+      turns: 0,
     };
     this.handleBack = this.handleClick.bind(this, false);
     this.handleForward = this.handleClick.bind(this, true);
@@ -31,7 +32,7 @@ class Catalog extends Component {
 
   render () {
     const {skills} = this.props;
-    const {activeKey, pose} = this.state;
+    const {activeKey, pose, turns} = this.state;
     // const curSkill = skills.find(x => x.name === this.state.activeKey);
     return (
       <StyledCatalog>
@@ -40,6 +41,7 @@ class Catalog extends Component {
                 description={skills[activeKey].description}
                 logo={skills[activeKey].logo}
                 pose={pose}
+                turns={turns}
               />
         <div>
           <StyledButton onClick={this.handleBack}>
@@ -55,7 +57,7 @@ class Catalog extends Component {
 
   handleClick(forward) {
     let {skills} = this.props;
-    let {activeKey} = this.state;
+    let {activeKey, turns} = this.state;
 
     // proper modulus funcion since javascript's sucks ass
     function properMod(modulus, numb) {
@@ -71,8 +73,10 @@ class Catalog extends Component {
     this.setState({
       pose: "shrunk",
     });
+
     setTimeout(() => {
       this.setState({
+        turns: turns + (forward? 1:-1),
         activeKey: properMod(skills.length, activeKey + (forward? 1:-1)),
         pose: "grown",
       });

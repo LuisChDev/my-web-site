@@ -27,8 +27,8 @@ const cubeMotion = keyframes`
 
 const AnimCube = posed.div({
   grown: { scale: 1.0,
-           rotateX: "270deg",
-           rotateY: "270deg",
+           rotateX: ({turns}) => `${360*turns}deg`,
+           rotateY: ({turns}) => `${360*turns}deg`,
            transition: {
              scale: {
                type: "spring", stiffness: 150, damping: 7,
@@ -40,9 +40,10 @@ const AnimCube = posed.div({
                duration: 3000,
              }
            }},
+
   shrunk: { scale: 0.0,
-            rotateX: "0deg",
-            rotateY: "0deg",
+            rotateX: ({turns}) => `${360*turns}deg`,
+            rotateY: ({turns}) => `${360*turns}deg`,
             transition: {
               duration: 300,
             }},
