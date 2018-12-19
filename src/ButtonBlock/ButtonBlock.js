@@ -5,8 +5,8 @@ const ButtonBlock = ({buttons}) => {
   return(
     <StyledBlock>
       {buttons
-       .map(x =>
-            <StyledLink href={x.link}>
+       .map((x, i) =>
+            <StyledLink href={x.link} key={i}>
               <StyledImage src={x.image} alt={x.name}/>
             </StyledLink>)}
     </StyledBlock>

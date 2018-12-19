@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {shallow} from 'enzyme';
 import {shallowToJson} from 'enzyme-to-json';
 import Skill from './Skill/Skill.js';
@@ -35,17 +34,18 @@ describe('Catalog', () => {
   });
 
   it('changes state correctly', () => {
-    expect.assertions(1);
+    expect.assertions(2);
     const compState = () => {
       return new Promise(resolve => {
         output.instance().handleForward();
         setTimeout(() => {
-          resolve(output.state().pose);
+          resolve([output.state().pose, output.state().activeKey]);
         }, 310);
       });
     };
     return compState().then(data => {
-      expect(data).toBe('open');
+      expect(data[0]).toBe('grown');
+      expect(data[1]).toBe(1);
     });
   });
 

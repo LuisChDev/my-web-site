@@ -15,13 +15,21 @@ import vidPoster from '../src/media/vidCover.png';
 import vid from './media/stockDef.webm';
 
 // backgrounds for the tiles
-import bkGrass from '../src/media/backgrounds/grass.png';
-import bkGround from '../src/media/backgrounds/ground.png';
+import bkFloor from './media/backgrounds/floor.jpg';
+import bkWall from './media/backgrounds/wall.png';
+import bkBrick from './media/backgrounds/brick.png';
 
-// source for the sprites
-import sprGoomba from '../src/media/enemies/goomba/SMWEnemies-0-0-00-00.png';
-import sprKoopaTroopa
-from '../src/media/enemies/koopa/blue/SMWEnemies-00-010.png';
+// images for the player sprite
+import imRight from './media/sprites/right.png';
+import imDown from './media/sprites/down.png';
+import imLeft from './media/sprites/left.png';
+import imUp from './media/sprites/up.png';
+
+// images for the player sprite
+import hammerRight from './media/sprites/hammerRight.png';
+import hammerDown from './media/sprites/hammerDown.png';
+import hammerLeft from './media/sprites/hammerLeft.png';
+import hammerUp from './media/sprites/hammerUp.png';
 
 // images for the skills
 import htmlIcon from './media/html5-icon.png';
@@ -99,8 +107,29 @@ const videoPlayerConf = {
  * tile background images.
  */
 const tileGridConf = {
-  grass: bkGrass,
-  ground: bkGround,
+  floor: bkFloor,
+  brick: bkBrick,
+  wall: bkWall,
+};
+
+/**
+ * images for the player sprite
+ */
+const playerSprite = {
+  right: imRight,
+  down: imDown,
+  left: imLeft,
+  up: imUp,
+};
+
+/**
+ * images for the hammer
+ */
+const hammerSprite = {
+  right: hammerRight,
+  down: hammerDown,
+  left: hammerLeft,
+  up: hammerUp,
 };
 
 /**
@@ -153,5 +182,5 @@ const cubeImages = {
  */
 
 export {sectionConf, videoPlayerConf, boxConf, tileGridConf, sections,
-        sprGoomba, sprKoopaTroopa, cubeImages, cubeColors,
-       socialMediaButtons};
+        cubeImages, cubeColors, playerSprite, hammerSprite,
+        socialMediaButtons};

@@ -6,7 +6,8 @@ exports[`Catalog renders correctly 1`] = `
     description="lorem ipsum dolor sit amet"
     logo="logo1"
     name="test1"
-    pose="open"
+    pose="grown"
+    turns={0}
   />
   <div>
     <styled.button

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skill component renders correctly 1`] = `
+<styled.div>
+  <Picture
+    logo="testLogo"
+    pose="testPose"
+  />
+  <div>
+    <h2>
+      testName
+    </h2>
+    <p>
+      this is a description
+    </p>
+  </div>
+</styled.div>
+`;
