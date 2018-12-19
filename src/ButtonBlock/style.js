@@ -7,7 +7,6 @@ const StyledBlock = styled.div`
   grid-gap: 20px;
   padding: 20px;
   margin-left: 30px;
-  background: rgba(255,255,255,0.5);
   max-width: 250px;
 `;
 
