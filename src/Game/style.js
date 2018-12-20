@@ -11,6 +11,7 @@ const StyledCell = styled.div`
   height: 9.6vh;
   width: 4vw;
   border: 1px solid #000;
+  z-index: -1;
   background-image: url(${({bkg}) => tileGridConf[bkg.name]})};
 `;
 

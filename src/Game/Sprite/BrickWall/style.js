@@ -4,7 +4,7 @@ import posed from 'react-pose';
 
 const PosedBrickWall = posed.div({
   broken: {
-    rotate: "90deg",
+    scale: 1.5,
     transition: {
       type: "spring",
     }

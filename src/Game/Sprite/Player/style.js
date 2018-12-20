@@ -18,13 +18,13 @@ const posedPlayer = posed.div({
 const StyledPlayer = styled(posedPlayer)`
   position: absolute;
   z-index: 10;
-  background: blue;
   width: 4vw;
   height: 10vh;
   top: ${({playPos}) => playPos[0]*5}vh;
   left: ${({playPos}) => playPos[1]*2}vw;
   background-image: url(${({playerFace}) => playerSprite[playerFace]});
   background-size: contain;
+  background-repeat: no-repeat;
 `;
 
 export default StyledPlayer;
