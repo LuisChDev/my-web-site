@@ -33,13 +33,14 @@ const posedHammer = posed.div({
 
 const StyledHammer = styled(posedHammer)`
   position: absolute;
-  z-index: 10;
+  z-index: 8;
   width: 4vw;
   height: 10vh;
   top: ${({playPos}) => playPos[0]*5}vh;
   left: ${({playPos}) => playPos[1]*2}vw;
   background-image: url(${({playerFace}) => hammerSprite[playerFace]});
   background-size: contain;
+  background-repeat: no-repeat;
 `;
 
 export default StyledHammer;

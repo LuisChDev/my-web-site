@@ -59,7 +59,8 @@ class Game extends Component {
                                 (objects[i][j].name==="brickWall"
                                  ?<BrickWall pose={
                                    objects[i][j].beingBroken?"breaking":""
-                                 } key={j} position={{x:j, y:i}}/>:""))}
+                                 } key={j} position={{x:j, y:i}}/>
+                                 :""))}
                        </StyledRow>)}
         </GridWrapper>
         <Player playPos={playPos}
@@ -77,6 +78,8 @@ class Game extends Component {
       this.movePlayerX(keyName==='d');
     } else if (keyName ==='w' || keyName==='s') {
       this.movePlayerY(keyName==='s');
+    } else if (keyName === 'p') {
+      this.attack();
     }
   }
 
@@ -111,19 +114,45 @@ class Game extends Component {
   }
 
   attack() {
+    const {playPos, playerFace, objects} = this.state;
     // animation of the hammer
     this.setState({
       attacking: true,
     });
     setTimeout(() => {
       this.setState({
+
         attacking: false,
       });
     }, 300);
 
     // animation of the brick wall (if any)
-    
-
+    const frontPos = [playPos[0] +
+                      (playerFace==='up'||playerFace==='down'
+                       ?(playerFace==='up'
+                          ?-1
+                         :1)
+                       :0),
+                      playPos[1] +
+                      (playerFace==='left'||playerFace==='right'
+                       ?(playerFace==='right'
+                         ?1
+                         :-1)
+                       :0)];
+    if (objects[frontPos[0]][frontPos[1]].breakable) {
+      // this.setState(prevState => {
+      //   let newObjects = [...prevState.objects];
+      //   newObjects[frontPos[0]][frontPos[1]].beingBroken = true;
+      //   return {objects: newObjects};
+      // });
+      setTimeout(() => {
+        this.setState(prevState => {
+          let newObjects = [...prevState.objects];
+          newObjects[frontPos[0]][frontPos[1]] = { name: 'none', walkable: true, breakable: false };
+          return {objects: newObjects};
+        });
+      }, 300);
+    }
   }
 
 }
