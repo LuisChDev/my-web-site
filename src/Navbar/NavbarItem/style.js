@@ -3,25 +3,27 @@ import styled, {css} from 'styled-components';
 /**
  * styled li for the navbar.
  */
-const StyledNavbarItem = styled.li`
+const StyledNavbarItem = styled.div`
   font-weight: bold;
   float: left;
-  ${props =>
-    props.isactivekey && css`text-decoration: underline-red;`}
+  transition: 0.3s;
+  :hover {
+    background-color: goldenrod;
+  }
+  ${({isactivekey}) => isactivekey && css`
+    background-color: purple;
+  `}
 `;
 
 /**
  * the styled link
  */
-const StyledNavbarLink = styled.a`
+const StyledNavbarLink = styled.p`
   display: block;
-  padding: 8px;
-  background-color: #dddddd;
+  margin: 8px;
   font-family: Verdana, Sans-serif;
   transition: 0.3s;
-  :hover {
-    background-color: #111;
-  }
+  cursor: pointer;
 `;
 
 export {StyledNavbarItem, StyledNavbarLink};

@@ -43,11 +43,13 @@ import reactIcon from './media/react-icon.svg';
 
 // images for the social media buttons
 import githubIcon from './media/github-icon.png';
-import redditIcon from './media/reddit-icon.png';
 import stackOverflowIcon from './media/stackOverflow-icon.png';
-import linkedinIcon from './media/linkedin-icon.png';
 import mailIcon from './media/mail-icon.png';
 import twitterIcon from './media/twitter-icon.png';
+
+// flags for the languages
+import esFlag from './media/flags/spain.png';
+import enFlag from './media/flags/britain.png';
 
 // constants
 const duration = 300;
@@ -67,22 +69,22 @@ const sectionConf = {
  */
 const sections = [
   {
-    text: "home",
+    text: "Home",
     url: "#home",
     id: "home",
   },
   {
-    text: "skills",
+    text: "Skills",
     url: "#skills",
     id: "skills",
   },
   {
-    text: "projects",
+    text: "Projects",
     url: "#projects",
     id: "projects",
   },
   {
-    text: "contact",
+    text: "Contact",
     url: "#contact",
     id: "contact",
   },
@@ -136,24 +138,18 @@ const hammerSprite = {
  * array with the images
  */
 const socialMediaButtons = [
-  {name: "Reddit",
-   image: redditIcon,
-   link: "https://reddit.com/user/**CENSORED**"},
   {name: "Github",
    image: githubIcon,
-   link: "https://github.com/**CENSORED**"},
+   link: "https://github.com/LuisChDev"},
   {name: "Stack Overflow",
    image: stackOverflowIcon,
-   link: "https://stackoverflow.com/users/**CENSORED**/**CENSORED**"},
+   link: "https://stackoverflow.com/users/**CENSORED**/luis-ch"},
   {name: "Twitter",
    image: twitterIcon,
-   link: "https://twitter.com/**CENSORED**"},
-  {name: "LinkedIn",
-   image: linkedinIcon,
-   link: "https://www.linkedin.com/in/luis-chavarriaga-95b21a171/"},
+   link: "https://twitter.com/LuisChDev"},
   {name: "Mail me",
    image: mailIcon,
-   link: "mailto:luischa123@gmail.com"},
+   link: "mailto:luischdev@gmail.com"},
 ];
 
 /**
@@ -178,9 +174,21 @@ const cubeImages = {
 };
 
 /**
- * colors for the cube faces
+ * languages the page will be in
  */
+const langs = [
+  "spanish",
+  "english",
+];
+
+/**
+ * flags for the language selection
+ */
+const flags = {
+  spanish: esFlag,
+  english: enFlag,
+};
 
 export {sectionConf, videoPlayerConf, boxConf, tileGridConf, sections,
         cubeImages, cubeColors, playerSprite, hammerSprite,
-        socialMediaButtons};
+        socialMediaButtons, langs, flags};

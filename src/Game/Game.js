@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {StyledRow, StyledCell, StyledGame, GridWrapper} from './style.js';
+import {StyledRow, StyledCell, StyledGame, GridWrapper,
+        Instructions} from './style.js';
 import Player from './Sprite/Player/Player.js';
 import Hammer from './Sprite/Hammer/Hammer.js';
 import BrickWall from './Sprite/BrickWall/BrickWall.js';
@@ -30,7 +31,6 @@ class Game extends Component {
     this.handleKeypress = this.handleKeypress.bind(this);
   }
 
-  // this.handleKeypress = this.handleKeypress.bind(this);
   componentDidMount() {
     window.addEventListener("keypress", (event) => {
       let keyName = event.key;
@@ -41,8 +41,13 @@ class Game extends Component {
   render() {
     const {grid, objects,
            playPos, playerPose, playerFace, attacking} = this.state;
+    const {instructions} = this.props;
     return (
       <StyledGame>
+        {/*Instructions*/}
+        <Instructions>
+          <p>{instructions}</p>
+        </Instructions>
         {/*terrain*/}
         <GridWrapper>
           {grid.map((x,i) =>
@@ -140,15 +145,12 @@ class Game extends Component {
                          :-1)
                        :0)];
     if (objects[frontPos[0]][frontPos[1]].breakable) {
-      // this.setState(prevState => {
-      //   let newObjects = [...prevState.objects];
-      //   newObjects[frontPos[0]][frontPos[1]].beingBroken = true;
-      //   return {objects: newObjects};
-      // });
       setTimeout(() => {
         this.setState(prevState => {
           let newObjects = [...prevState.objects];
-          newObjects[frontPos[0]][frontPos[1]] = { name: 'none', walkable: true, breakable: false };
+          newObjects[frontPos[0]][frontPos[1]] = { name: 'none',
+                                                   walkable: true,
+                                                   breakable: false };
           return {objects: newObjects};
         });
       }, 300);

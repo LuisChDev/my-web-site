@@ -6,7 +6,7 @@ import StyledTextBox from './style.js';
  */
 const TextBox = (props) => {
   return (
-    <StyledTextBox pane={props.pane}>
+    <StyledTextBox pane={props.pane} pose={props.open?"open":"closed"}>
       {props.children}
     </StyledTextBox>
   );

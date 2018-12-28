@@ -4,10 +4,11 @@ import {StyledNavbarItem, StyledNavbarLink} from './style.js';
 /**
  * styled everything
  */
-const NavbarItem = (props) =>
-      <StyledNavbarItem isactivekey={props.isactivekey}>
-        <StyledNavbarLink href={props.url}>
-          {props.text}
+const NavbarItem = ({url, isactivekey, text, handleClick}) =>
+      <StyledNavbarItem onClick={() => {handleClick();}}
+                        isactivekey={isactivekey}>
+        <StyledNavbarLink href={url}>
+          {text}
         </StyledNavbarLink>
       </StyledNavbarItem>;
 
