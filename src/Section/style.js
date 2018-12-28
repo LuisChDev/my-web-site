@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import posed from 'react-pose';
 import {sectionConf} from '../style.js';
 
 /**

@@ -1,9 +1,9 @@
 import React from 'react';
 import {StyledBlock, StyledImage, StyledLink} from './style.js';
 
-const ButtonBlock = ({buttons}) => {
+const ButtonBlock = ({buttons, open}) => {
   return(
-    <StyledBlock>
+    <StyledBlock pose={open?"open":"closed"}>
       {buttons
        .map((x, i) =>
             <StyledLink href={x.link} key={i}>

@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import posed from 'react-pose';
 
 /**
  * styled box.
@@ -6,7 +7,19 @@ import styled, {css} from 'styled-components';
  * - as a large pane to the side of the viewport
  * - as a small box of text, placed somewhere on the window
  */
-const StyledTextBox = styled.div`
+const PosedTextBox = posed.div({
+  closed: {
+    height: "0vh",
+  },
+  open: {
+    height: "80vh",
+    transition: {
+      duration: 3000,
+    }
+  },
+});
+
+const StyledTextBox = styled(PosedTextBox)`
   text-align: justify;
   text-justify: inter-word;
   background: rgba(0,0,0,0.5);
@@ -16,7 +29,6 @@ const StyledTextBox = styled.div`
   font-family: Verdana, Sans-serif;
   float: right;
   width: 45vw;
-  height: 80vh;
   overflow: hidden;
   ${/*navbar offset*/''}
   margin: 50px 20px 20px 20px;

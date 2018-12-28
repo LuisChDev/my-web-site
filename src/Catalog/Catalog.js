@@ -17,23 +17,10 @@ class Catalog extends Component {
     this.handleForward = this.handleClick.bind(this, true);
   }
 
-  // div that expands on scroll to occupy half the screen, spreading from the
-  // top.
-  //   div inside that occupies the upper half. Fades together wit its children
-  //   into existence.
-  //     divs to the left and right. they fill the entire height, but only a
-  //     fraction of the width. Inside, a button with an arrow. on click:
-  //     change state on the container (first element).
-  //     middle div which changes in response to the state in first element.
-  //       3D figure floating around in the inside. on click: bounce around.
-  //   div which holds the description
-  //     div with the title
-  //     div with the description body
-
   render () {
-    const {skills} = this.props;
+    const {skills, buttons} = this.props;
     const {activeKey, pose, turns} = this.state;
-    // const curSkill = skills.find(x => x.name === this.state.activeKey);
+
     return (
       <StyledCatalog>
               <Skill
@@ -45,10 +32,10 @@ class Catalog extends Component {
               />
         <div>
           <StyledButton onClick={this.handleBack}>
-            Previous
+            {buttons.back}
           </StyledButton>
           <StyledButton onClick={this.handleForward}>
-            Next
+            {buttons.forward}
           </StyledButton>
         </div>
       </StyledCatalog>

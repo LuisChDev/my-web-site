@@ -23,7 +23,20 @@ const GridWrapper = styled.div`
   position: absolute;
 `;
 
-// ${props => (props.bkg !== 'air') && css`
-//     background-image: ${tileGridConf[props.bkg]};
-//   `}
-export {StyledRow, StyledCell, StyledGame, GridWrapper};
+// I'll try placing the instructions here
+const Instructions = styled.div`
+  position: absolute;
+  width: 45vw;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px;
+  font-size: large;
+  font-family: Verdana, Sans-serif;
+  display: float;
+  float: right;
+  overflow: hidden;
+  margin: 50px 20px 20px 20px;
+  z-index: 100;
+`;
+
+export {StyledRow, StyledCell, StyledGame, GridWrapper, Instructions};

@@ -1,11 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
+import posed from 'react-pose';
 
-const StyledBlock = styled.div`
+const PosedBlock = posed.div({
+  open: {
+    scale: 1.0,
+  },
+  closed: {
+    scale: 0.0,
+    transition: {
+      // duration: 3000,
+      type: "spring",
+      stiffness: 300,
+      damping: 10,
+    }
+  },
+});
+
+const StyledBlock = styled(PosedBlock)`
   display: grid;
   grid-template-columns: 100px 100px;
   grid-gap: 20px;
-  padding: 20px;
+  padding: 20vh 20px;
   margin-left: 30px;
   max-width: 250px;
 `;

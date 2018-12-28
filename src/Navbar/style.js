@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const StyledNavbar = styled.ul`
   list-style-type: none;
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
   background-color: rgba(192, 192, 192, 0.8);
   position: fixed;
   min-width: 100%;
@@ -15,4 +15,4 @@ const StyledNavbar = styled.ul`
   border-color: silver;
 `;
 
-export default StyledNavbar;
+export {StyledNavbar};
