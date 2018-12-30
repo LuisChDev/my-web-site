@@ -10,29 +10,17 @@ class Catalog extends Component {
     super(props);
     this.state = {
       activeKey: 0,
-      pose: "open",
+      pose: "grown",
+      turns: 0,
     };
     this.handleBack = this.handleClick.bind(this, false);
     this.handleForward = this.handleClick.bind(this, true);
   }
 
-  // div that expands on scroll to occupy half the screen, spreading from the
-  // top.
-  //   div inside that occupies the upper half. Fades together wit its children
-  //   into existence.
-  //     divs to the left and right. they fill the entire height, but only a
-  //     fraction of the width. Inside, a button with an arrow. on click:
-  //     change state on the container (first element).
-  //     middle div which changes in response to the state in first element.
-  //       3D figure floating around in the inside. on click: bounce around.
-  //   div which holds the description
-  //     div with the title
-  //     div with the description body
-
   render () {
-    const {skills} = this.props;
-    const {activeKey, pose} = this.state;
-    // const curSkill = skills.find(x => x.name === this.state.activeKey);
+    const {skills, buttons} = this.props;
+    const {activeKey, pose, turns} = this.state;
+
     return (
       <StyledCatalog>
               <Skill
@@ -40,31 +28,44 @@ class Catalog extends Component {
                 description={skills[activeKey].description}
                 logo={skills[activeKey].logo}
                 pose={pose}
+                turns={turns}
               />
-        <StyledButton onClick={this.handleBack}>
-          Previous
-        </StyledButton>
-        <StyledButton onClick={this.handleForward}>
-          Next
-        </StyledButton>
+        <div>
+          <StyledButton onClick={this.handleBack}>
+            {buttons.back}
+          </StyledButton>
+          <StyledButton onClick={this.handleForward}>
+            {buttons.forward}
+          </StyledButton>
+        </div>
       </StyledCatalog>
     );
   }
 
   handleClick(forward) {
     let {skills} = this.props;
-    let {activeKey} = this.state;
-    const {curName} = skills[activeKey].name;
+    let {activeKey, turns} = this.state;
+
+    // proper modulus funcion since javascript's sucks ass
+    function properMod(modulus, numb) {
+      if (numb >= 0) {
+        return numb%modulus;
+      } else {
+        while(numb < 0) {
+          numb += modulus;
+        } return numb;
+      }
+    }
+
     this.setState({
-      pose: "closed",
+      pose: "shrunk",
     });
+
     setTimeout(() => {
       this.setState({
-        activeKey: skills[(forward? skills
-                   .findIndex((x) => x.name === curName) + 1
-                   :skills
-                           .findIndex((x) => x.name === curName) - 1)],
-        pose: "open",
+        turns: turns + (forward? 1:-1),
+        activeKey: properMod(skills.length, activeKey + (forward? 1:-1)),
+        pose: "grown",
       });
     }, 300);
   }

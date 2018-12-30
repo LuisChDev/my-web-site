@@ -25,30 +25,42 @@ const cubeMotion = keyframes`
   }
 `;
 
+const AnimCube = posed.div({
+  grown: { scale: 1.0,
+           rotateX: ({turns}) => `${360*turns}deg`,
+           rotateY: ({turns}) => `${360*turns}deg`,
+           transition: {
+             scale: {
+               type: "spring", stiffness: 150, damping: 7,
+             },
+             rotateX: {
+               duration: 3000,
+             },
+             rotateY: {
+               duration: 3000,
+             }
+           }},
+
+  shrunk: { scale: 0.0,
+            rotateX: ({turns}) => `${360*turns}deg`,
+            rotateY: ({turns}) => `${360*turns}deg`,
+            transition: {
+              duration: 300,
+            }},
+});
+
 /**
  * styles for the cube.
  */
-const PosedCube = styled.div`
+const StyledCube = styled(AnimCube)`
   margin: auto;
   position: relative;
-  height: 24vw;
-  width: 24vw;
+  height: 16vw;
+  width: 16vw;
   transform-style: preserve-3d;
-  animation: ${cubeMotion} 20s linear infinite;
 `;
-// const StyledCubeWrap = ({hostRef}) => <StyledCube ref={hostRef}/>;
 
-
-// /**
-//  * container div for the whole cube.
-//  */
-// const PosedCube = posed(StyledCubeWrap)({
-//   rotating: {
-//     rotateX: ({rotatex}) => rotatex,
-//     rotateY: ({rotatey}) => rotatey,
-//   }
-// });
-
+// animation: ${cubeMotion} 20s linear infinite;
 /**
  * each individual face of the cube.
  */
@@ -63,7 +75,7 @@ const StyledFace = styled.div`
   ${({logo}) => css`
     background-image: url(${cubeImages[logo]});
   `};
-  background-size: 150px 150px;
+  background-size: 100px 100px;
   background-repeat: no-repeat;
   background-position: center;
   ${props => css`
@@ -72,4 +84,4 @@ const StyledFace = styled.div`
   `}
 `;
 
-export {PosedCube, StyledFace, CubeWrapper};
+export {StyledCube, StyledFace, CubeWrapper};

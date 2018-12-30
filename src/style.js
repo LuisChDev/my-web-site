@@ -15,13 +15,21 @@ import vidPoster from '../src/media/vidCover.png';
 import vid from './media/stockDef.webm';
 
 // backgrounds for the tiles
-import bkGrass from '../src/media/backgrounds/grass.png';
-import bkGround from '../src/media/backgrounds/ground.png';
+import bkFloor from './media/backgrounds/floor.jpg';
+import bkWall from './media/backgrounds/wall.png';
+import bkBrick from './media/backgrounds/brick.png';
 
-// source for the sprites
-import sprGoomba from '../src/media/enemies/goomba/SMWEnemies-0-0-00-00.png';
-import sprKoopaTroopa
-from '../src/media/enemies/koopa/blue/SMWEnemies-00-010.png';
+// images for the player sprite
+import imRight from './media/sprites/right.png';
+import imDown from './media/sprites/down.png';
+import imLeft from './media/sprites/left.png';
+import imUp from './media/sprites/up.png';
+
+// images for the player sprite
+import hammerRight from './media/sprites/hammerRight.png';
+import hammerDown from './media/sprites/hammerDown.png';
+import hammerLeft from './media/sprites/hammerLeft.png';
+import hammerUp from './media/sprites/hammerUp.png';
 
 // images for the skills
 import htmlIcon from './media/html5-icon.png';
@@ -30,8 +38,18 @@ import gitIcon from './media/git-icon.png';
 import javascriptIcon from './media/javascript-icon.png';
 import pythonIcon from './media/python-icon.png';
 import mysqlIcon from './media/mysql-icon.png';
-import postgresqlIcon from './media/python-icon.png';
+import postgresqlIcon from './media/postgresql-icon.png';
 import reactIcon from './media/react-icon.svg';
+
+// images for the social media buttons
+import githubIcon from './media/github-icon.png';
+import stackOverflowIcon from './media/stackOverflow-icon.png';
+import mailIcon from './media/mail-icon.png';
+import twitterIcon from './media/twitter-icon.png';
+
+// flags for the languages
+import esFlag from './media/flags/spain.png';
+import enFlag from './media/flags/britain.png';
 
 // constants
 const duration = 300;
@@ -51,22 +69,22 @@ const sectionConf = {
  */
 const sections = [
   {
-    text: "home",
+    text: "Home",
     url: "#home",
     id: "home",
   },
   {
-    text: "skills",
+    text: "Skills",
     url: "#skills",
     id: "skills",
   },
   {
-    text: "projects",
+    text: "Projects",
     url: "#projects",
     id: "projects",
   },
   {
-    text: "contact",
+    text: "Contact",
     url: "#contact",
     id: "contact",
   },
@@ -91,14 +109,48 @@ const videoPlayerConf = {
  * tile background images.
  */
 const tileGridConf = {
-  grass: bkGrass,
-  ground: bkGround,
+  floor: bkFloor,
+  brick: bkBrick,
+  wall: bkWall,
 };
 
 /**
- * sprites
+ * images for the player sprite
  */
+const playerSprite = {
+  right: imRight,
+  down: imDown,
+  left: imLeft,
+  up: imUp,
+};
 
+/**
+ * images for the hammer
+ */
+const hammerSprite = {
+  right: hammerRight,
+  down: hammerDown,
+  left: hammerLeft,
+  up: hammerUp,
+};
+
+/**
+ * array with the images
+ */
+const socialMediaButtons = [
+  {name: "Github",
+   image: githubIcon,
+   link: "https://github.com/LuisChDev"},
+  {name: "Stack Overflow",
+   image: stackOverflowIcon,
+   link: "https://stackoverflow.com/users/**CENSORED**/luis-ch"},
+  {name: "Twitter",
+   image: twitterIcon,
+   link: "https://twitter.com/LuisChDev"},
+  {name: "Mail me",
+   image: mailIcon,
+   link: "mailto:luischdev@gmail.com"},
+];
 
 /**
  * background for the skills
@@ -122,8 +174,21 @@ const cubeImages = {
 };
 
 /**
- * colors for the cube faces
+ * languages the page will be in
  */
+const langs = [
+  "español",
+  "english",
+];
+
+/**
+ * flags for the language selection
+ */
+const flags = {
+  español: esFlag,
+  english: enFlag,
+};
 
 export {sectionConf, videoPlayerConf, boxConf, tileGridConf, sections,
-        sprGoomba, sprKoopaTroopa, cubeImages, cubeColors};
+        cubeImages, cubeColors, playerSprite, hammerSprite,
+        socialMediaButtons, langs, flags};
