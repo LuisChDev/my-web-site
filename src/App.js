@@ -37,7 +37,6 @@ class App extends Component {
       language: "english",
     };
   }
-
   render() {
     let {curSec, language} = this.state;
     return (
@@ -52,7 +51,7 @@ class App extends Component {
           <VideoPlayer bkg/>
           <TextBox pane open={curSec==="home"}>
             <h2>{DB[language].home.title}</h2>
-            <p>{DB[language].home.body}</p>
+            <p dangerouslySetInnerHTML={{__html: DB[language].home.body}}/>
           </TextBox>
         </Section>
 
@@ -65,7 +64,7 @@ class App extends Component {
           {/*projects section*/}
           <TextBox pane open={curSec==="projects"}>
             <h2>{DB[language].projects.title}</h2>
-            <p>{DB[language].projects.body}</p>
+            <p dangerouslySetInnerHTML={{__html: DB[language].projects.body}}/>
           </TextBox>
           <Catalog
             skills={DB[language].skillList}
@@ -77,8 +76,7 @@ class App extends Component {
           {/*contact me section*/}
           <TextBox open={curSec==="contact"}>
             <h2>{DB[language].contact.title}</h2>
-            <p>{DB[language].contact.body}</p>
-          </TextBox>
+            <p dangerouslySetInnerHTML={{__html: DB[language].contact.body}}/>          </TextBox>
           <ButtonBlock buttons={socialMediaButtons} open={curSec==="contact"}/>
         </Section>
 
