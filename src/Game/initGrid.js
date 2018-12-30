@@ -27,11 +27,11 @@ const simpleWorld = `
 
 const simpleWorldObjects = `
                          
-         HH  H     HH H  
-             H           
-   HH        H     HH    
-                         
-        HHHH             
+      H  HH  H     HH H  
+ H HH H      H           
+ H HH        H     HH    
+ H H  HH                 
+ HH HH  HHHH  HHHH       
                          
    HH   HH       HHH  HH 
          H       H     H 

@@ -1,17 +1,16 @@
 const DB = {
   english: {
     home: {
-      title: "Mauris ac felis vel velit tristique imperdiet.",
-      body: `Pellentesque dapibus suscipit ligula. Donec posuere augue in quam.
-   Etiam vel tortor sodales tellus ultricies commodo. Suspendisse potenti.
-   Aenean in sem ac leo mollis blandit. Donec neque quam, dignissim in, mollis
-   nec, sagittis eu, wisi. Phasellus lacus. Etiam laoreet quam sed arcu.
-   Phasellus at dui in ligula mollis ultricies. Integer placerat tristique nisl.
-   Praesent augue. Fusce commodo. Vestibulum convallis, lorem a tempus semper,
-   dui dui euismod elit, vitae placerat urna tortor vitae lacus. Nullam libero
-   mauris, consequat quis, varius et, dictum id, arcu. Mauris mollis tincidunt
-   felis. Aliquam feugiat tellus ut neque. Nulla facilisis, risus a rhoncus
-   fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.`
+      title: "Get Things Done.",
+      body: `Hello. My name is Luis (without the 'o'), and I like to Get Things
+      Done™. I try, at least. Welcome to my website. It only took me <s> four
+      months</s> three weeks or so to get this website up and running, and I'll
+      get YOUR website online just as fast. <u>As long as I get my coffee that
+      is.</u> Did I mention I like to have coffee near midnight? Anyway, I'm
+      currently enrolled at the FreeCodeCamp Institution, and LOVING every
+      second of it. I do all kinds of coding, from the servers to the browsers,
+      all the way to tweaking the text editor to my liking. The next page will
+      illustrate this.`,
     },
 
     skills: {
@@ -19,35 +18,22 @@ const DB = {
     },
 
     projects: {
-      title: "Curabitur lacinia pulvinar nibh.",
-      body: `Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi nec
-   facilisis facilisis, est dui fermentum leo, quis tempor ligula erat quis
-   odio. Nunc porta vulputate tellus. Nunc rutrum turpis sed pede. Sed bibendum.
-   Aliquam posuere. Nunc aliquet, augue nec adipiscing interdum, lacus tellus
-   malesuada massa, quis varius mi purus non odio. Pellentesque condimentum,
-   magna ut suscipit hendrerit, ipsum augue ornare nulla, non luctus diam neque
-   sit amet urna. Curabitur vulputate vestibulum lorem. Fusce sagittis, libero
-   non molestie mollis, magna orci ultrices dolor, at vulputate neque nulla
-   lacinia eros. Sed id ligula quis est convallis tempor. Curabitur lacinia
-   pulvinar nibh. Nam a sapien.`,
+      title: "Know my strengths",
+      body: `Many different technologies are in use today, on the ever expanding
+tech ecosystem. I try to keep up with the latest in front-end technology, as
+well as back-end engines, databases and everything else. <s>They just keep
+coming</s> Here's a (non exhaustive) list of the frameworks, languages and
+libraries I know, and can use in building your next hit website.`,
       buttons: {
         back: "back",
         forward: "foward",
-      }
+      },
     },
 
     contact: {
-      title: "In id erat non orci commodo lobortis.",
-      body: `Pellentesque dapibus suscipit ligula. Donec posuere augue in quam.
-   Etiam vel tortor sodales tellus ultricies commodo. Suspendisse potenti.
-   Aenean in sem ac leo mollis blandit. Donec neque quam, dignissim in, mollis
-   nec, sagittis eu, wisi. Phasellus lacus. Etiam laoreet quam sed arcu.
-   Phasellus at dui in ligula mollis ultricies. Integer placerat tristique nisl.
-   Praesent augue. Fusce commodo. Vestibulum convallis, lorem a tempus semper,
-   dui dui euismod elit, vitae placerat urna tortor vitae lacus. Nullam libero
-   mauris, consequat quis, varius et, dictum id, arcu. Mauris mollis tincidunt
-   felis. Aliquam feugiat tellus ut neque. Nulla facilisis, risus a rhoncus
-   fermentum, tellus tellus lacinia purus, et dictum nunc justo sit amet elit.`
+      title: "Contact me",
+      body: `I try to keep up with events in Twitter and Stackoverflow. Checkout
+some of my projects on Github. You can also mail me using the link to the left.`,
     },
 
     skillList: [
@@ -109,15 +95,18 @@ const DB = {
     ],
   },
 
-  spanish: {
+  español: {
     home: {
-      title: "Nam a sapien.",
-      body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-      hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl,
-      tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla
-      posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras
-      placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.`,
+      title: "Hacer Las Cosas.",
+      body: `Hola. My nombre es Luis. y me gusta Hacer Las Cosas™. (Suena mejor
+      en inglés :/) Bienvenido a mi sitio web. Sólo me tomó <s>cuatro meses</s>
+      tres semanas más o menos terminar y montar este sitio, y puedo poner TU
+      sitio en línea igual de rápido. <u>Siempre y cuando me tome mi café</u>.
+      ¿Mencioné que tomo café a las doce de la noche? De todas formas, Estoy
+      estudiiando ahora mismo en FreeCodeCamp.org y <b>disfrutando</b> cada
+      segundo. Hago todo tipo de programas, del servidor al navegador,
+      hasta modificar el editor de texto que uso en lo más mínimo. La
+      próxima página es una demostración.`,
     },
 
     skills: {
@@ -125,14 +114,13 @@ const DB = {
     },
 
     projects: {
-      title: "Donec hendrerit tempor tellus.  ",
-      body: `Aliquam erat volutpat. Nunc eleifend leo vitae magna. In id erat
-      non orci commodo lobortis. Proin neque massa, cursus ut, gravida ut,
-      lobortis eget, lacus. Sed diam. Praesent fermentum tempor tellus. Nullam
-      tempus. Mauris ac felis vel velit tristique imperdiet. Donec at pede.
-      Etiam vel neque nec dui dignissim bibendum. Vivamus id enim. Phasellus
-      neque orci, porta a, aliquet quis, semper a, massa. Phasellus purus.
-      Pellentesque tristique imperdiet tortor. Nam euismod tellus id erat.`,
+      title: "Conoce mis fortalezas",
+      body: `Muchas tecnologías diferentes están en uso hoy, en el ecosistema
+      informático en constante expansión. Trato de mantenerme al tanto con lo
+      último en sistemas front-end, así como motores back-end, bases de datos y
+      todo lo demás. <s>Nunca se acaban</s> Aquí ha una lista (no exhaustiva) de
+      los frameworks, lenguajes y bibliotecas que conozco, y puedo usar para
+      construir tu próximo sitio exitoso.`,
       buttons: {
         back: "anterior",
         forward: "siguiente",
@@ -140,14 +128,10 @@ const DB = {
     },
 
     contact: {
-      title: "Cum sociis natoque penatibus et magnis dis parturient montes.",
-      body: `Aliquam erat volutpat. Nunc eleifend leo vitae magna. In id erat
-      non orci commodo lobortis. Proin neque massa, cursus ut, gravida ut,
-      lobortis eget, lacus. Sed diam. Praesent fermentum tempor tellus. Nullam
-      tempus. Mauris ac felis vel velit tristique imperdiet. Donec at pede.
-      Etiam vel neque nec dui dignissim bibendum. Vivamus id enim. Phasellus
-      neque orci, porta a, aliquet quis, semper a, massa. Phasellus purus.
-      Pellentesque tristique imperdiet tortor. Nam euismod tellus id erat.`,
+      title: "Contáctame",
+      body: `Trato de mantenerme al tanto de las cosas en Twitter y
+      stackOverflow. Puedes ver algunos de mis proyectos en Github. También
+      puedes enviarme un correo usando el enlace a la izquierda.`,
     },
 
     skillList: [

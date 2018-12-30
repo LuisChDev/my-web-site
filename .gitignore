@@ -29,4 +29,4 @@ project-planning.org
 
 # stuff Emacs needs
 /**/.tern-port
-/**/*.el
+/**/*.elpackage-lock.json=false
