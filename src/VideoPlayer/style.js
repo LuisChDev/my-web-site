@@ -1,24 +1,25 @@
 import {videoPlayerConf} from '../style.js';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 /**
- * same thing as above but with styled-components.
+ * Styles for the video player.
  */
 const StyledVideo = styled.video`
-  top: 50%;
-  left: 50%;
   position: fixed;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  transform: translateX(-50%) translateY(-50%);
-  background-size: cover;
+  z-index: ${({bkg}) => bkg?-2:-1};
+  width: ${({bkg}) => bkg?"100%":"auto"};
+  height: ${({bkg}) => bkg?"auto":"100%"};
+  ${({bkg}) => bkg && css`
+    filter: blur(8px);
+    background-size: cover;
+  `}
+    ${({bkg}) => !bkg && css`
+      margin: auto;
+  `}
 `;
 
-
-//position: fixed;
 const videoConfig = {
   poster: videoPlayerConf.poster,
   video: videoPlayerConf.video,

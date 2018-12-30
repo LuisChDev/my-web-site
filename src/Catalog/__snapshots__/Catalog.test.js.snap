@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Catalog renders correctly 1`] = `
+<styled.div>
+  <Skill
+    description="lorem ipsum dolor sit amet"
+    logo="logo1"
+    name="test1"
+    pose="grown"
+    turns={0}
+  />
+  <div>
+    <styled.button
+      onClick={[Function]}
+    >
+      Previous
+    </styled.button>
+    <styled.button
+      onClick={[Function]}
+    >
+      Next
+    </styled.button>
+  </div>
+</styled.div>
+`;
