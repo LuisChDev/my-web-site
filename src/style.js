@@ -177,7 +177,7 @@ const cubeImages = {
  * languages the page will be in
  */
 const langs = [
-  "spanish",
+  "español",
   "english",
 ];
 
@@ -185,7 +185,7 @@ const langs = [
  * flags for the language selection
  */
 const flags = {
-  spanish: esFlag,
+  español: esFlag,
   english: enFlag,
 };
 
