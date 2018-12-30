@@ -25,6 +25,8 @@ import {sections, socialMediaButtons, langs} from './style.js';
 //initialize the polyfill.
 smoothscroll.polyfill();
 
+// this little comment will appear on devel but not on master
+
 /**
  * Main app element with all the components in place.
  */
