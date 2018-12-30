@@ -4,13 +4,13 @@ const DB = {
       title: "Get Things Done.",
       body: `Hello. My name is Luis (without the 'o'), and I like to Get Things
       Done™. I try, at least. Welcome to my website. It only took me <s> four
-      months</s> three weeks or so to get this website up and running, and
-      I'll get YOUR website online just as fast. <u>As long as I get my
-      coffee that is.</u> Did I mention I like to have coffee near
-      midnight? Anyway, I'm currently enrolled at the FreeCodeCamp Institution,
-      and LOVING every second of it. I do all kinds of coding, from the servers
-      to the browsers, all the way to the build automation (and editor
-      customization). The next page will illustrate this.`,
+      months</s> three weeks or so to get this website up and running, and I'll
+      get YOUR website online just as fast. <u>As long as I get my coffee that
+      is.</u> Did I mention I like to have coffee near midnight? Anyway, I'm
+      currently enrolled at the FreeCodeCamp Institution, and LOVING every
+      second of it. I do all kinds of coding, from the servers to the browsers,
+      all the way to tweaking the text editor to my liking. The next page will
+      illustrate this.`,
     },
 
     skills: {
@@ -20,10 +20,10 @@ const DB = {
     projects: {
       title: "Know my strengths",
       body: `Many different technologies are in use today, on the ever expanding
-tech ecosystem. I try to keep up with the latest in front-end technology, as well
-as back-end engines, databases and everything else. <s>They just keep coming</s>
-Here's a (non exhaustive) list of the frameworks, languages and libraries I know,
-and can use in building your next hit website.`,
+tech ecosystem. I try to keep up with the latest in front-end technology, as
+well as back-end engines, databases and everything else. <s>They just keep
+coming</s> Here's a (non exhaustive) list of the frameworks, languages and
+libraries I know, and can use in building your next hit website.`,
       buttons: {
         back: "back",
         forward: "foward",
@@ -105,7 +105,7 @@ some of my projects on Github. You can also mail me using the link to the left.`
       ¿Mencioné que tomo café a las doce de la noche? De todas formas, Estoy
       estudiiando ahora mismo en FreeCodeCamp.org y <b>disfrutando</b> cada
       segundo. Hago todo tipo de programas, del servidor al navegador,
-      incluyendo el proceso de compilación (y configurar editores de texto). La
+      hasta modificar el editor de texto que uso en lo más mínimo. La
       próxima página es una demostración.`,
     },
 
@@ -115,7 +115,12 @@ some of my projects on Github. You can also mail me using the link to the left.`
 
     projects: {
       title: "Conoce mis fortalezas",
-      body: `Muchas tecnologías diferentes están en uso hoy, en el ecosistema informático en constante expansión. Trato de mantenerme al tanto con lo último en sistemas front-end, así como motores back-end, bases de datos y todo lo demás. <s>Nunca se acaban</s> Aquí ha una lista (no exhaustiva) de los frameworks, lenguajes y bibliotecas que conozco, y puedo usar para construir tu próximo sitio exitoso.`,
+      body: `Muchas tecnologías diferentes están en uso hoy, en el ecosistema
+      informático en constante expansión. Trato de mantenerme al tanto con lo
+      último en sistemas front-end, así como motores back-end, bases de datos y
+      todo lo demás. <s>Nunca se acaban</s> Aquí ha una lista (no exhaustiva) de
+      los frameworks, lenguajes y bibliotecas que conozco, y puedo usar para
+      construir tu próximo sitio exitoso.`,
       buttons: {
         back: "anterior",
         forward: "siguiente",
@@ -124,7 +129,9 @@ some of my projects on Github. You can also mail me using the link to the left.`
 
     contact: {
       title: "Contáctame",
-      body: `Trato de mantenerme al tanto de las cosas en Twitter y stackOverflow. Puedes ver algunos de mis proyectos en Github. También puedes enviarme un correo usando el enlace a la izquierda.`,
+      body: `Trato de mantenerme al tanto de las cosas en Twitter y
+      stackOverflow. Puedes ver algunos de mis proyectos en Github. También
+      puedes enviarme un correo usando el enlace a la izquierda.`,
     },
 
     skillList: [
