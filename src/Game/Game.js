@@ -51,12 +51,15 @@ class Game extends Component {
   render() {
     const {grid, objects,
            playPos, playerPose, playerFace, attacking} = this.state;
-    const {instructions} = this.props;
+    const {instructions, mobile} = this.props;
     return (
       <StyledGame>
         {/*Instructions*/}
         <Instructions>
           <p>{instructions}</p>
+        </Instructions>
+        <Instructions mobile>
+          <p>{mobile}</p>
         </Instructions>
 
         {/*terrain*/}

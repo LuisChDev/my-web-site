@@ -18,13 +18,13 @@ class Navbar extends Component {
   }
 
   render() {
-    const {items, langs, handleLang} = this.props;
+    const {items, langs, text, handleLang} = this.props;
     const {activeKey} = this.state;
     return (
       <StyledNavbar itemID="navbar">
         {items
          .map((x) =>
-              <NavbarItem text={x.text}
+              <NavbarItem text={text[x.id]}
                           key={x.id}
                           isactivekey={x.id === activeKey}
                           url={x.url}
