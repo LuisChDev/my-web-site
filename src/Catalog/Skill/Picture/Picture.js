@@ -8,12 +8,12 @@ const Picture = ({logo, pose, turns}) => {
     return(
       <CubeWrapper>
         <StyledCube pose={pose} turns={turns}>
-          {[["X", 0, "Z", 8],
-            ["X", 180, "Z", -8],
-            ["Y", 90, "X", 8],
-            ["Y", -90, "X", -8],
-            ["X", 90, "Y", 8],
-            ["X", -90, "Y", -8]].map((x,i) =>
+          {[["X", 0, "Z", 15],
+            ["X", 180, "Z", -15],
+            ["Y", 90, "X", 15],
+            ["Y", -90, "X", -15],
+            ["X", 90, "Y", 15],
+            ["X", -90, "Y", -15]].map((x,i) =>
                                       <StyledFace r={x[0]} rd={x[1]}
                                                   t={x[2]} td={x[3]}
                                                   i={i} logo={logo}

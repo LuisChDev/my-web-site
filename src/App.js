@@ -18,12 +18,15 @@ import TextBox from './TextBox/textBox.js';
 import Game from './Game/Game.js';
 import Catalog from './Catalog/Catalog.js';
 import ButtonBlock from './ButtonBlock/ButtonBlock.js';
+import Warning from './Warning/Warning.js';
 
 // styles.
 import {sections, socialMediaButtons, langs} from './style.js';
 
 //initialize the polyfill.
 smoothscroll.polyfill();
+
+// this little comment will appear on devel but not on master
 
 /**
  * Main app element with all the components in place.
@@ -42,27 +45,33 @@ class App extends Component {
     return (
       <div>
         <Navbar
-          items={[...sections]} langs={langs}
+          items={[...sections]} langs={langs} text={DB[language].navbar}
           handleLang={(lang) => this.handleLang(lang)}/>
 
-        <Section itemId="home">
+        <Section itemId="home" open={curSec==="home"}>
           {/*welcome screen*/}
           <VideoPlayer bkg={false}/>
           <VideoPlayer bkg/>
-          <TextBox pane open={curSec==="home"}>
+          <TextBox>
             <h2>{DB[language].home.title}</h2>
             <p dangerouslySetInnerHTML={{__html: DB[language].home.body}}/>
           </TextBox>
         </Section>
 
-        <Section itemId="skills">
+        <Section itemId="skills" adjusted>
           {/* skills section */}
-          <Game instructions={DB[language].skills.title}/>
+          <Warning>
+            <h1>
+              Move your phone sideways to play!
+            </h1>
+          </Warning>
+          <Game instructions={DB[language].skills.title}
+                mobile={DB[language].skills.mobile}/>
         </Section>
 
-        <Section itemId="projects">
+        <Section itemId="projects" open={curSec==="projects"}>
           {/*projects section*/}
-          <TextBox pane open={curSec==="projects"}>
+          <TextBox>
             <h2>{DB[language].projects.title}</h2>
             <p dangerouslySetInnerHTML={{__html: DB[language].projects.body}}/>
           </TextBox>
@@ -72,11 +81,12 @@ class App extends Component {
           />
         </Section>
 
-        <Section itemId="contact">
+        <Section itemId="contact" open={curSec==="contact"}>
           {/*contact me section*/}
-          <TextBox open={curSec==="contact"}>
+          <TextBox>
             <h2>{DB[language].contact.title}</h2>
-            <p dangerouslySetInnerHTML={{__html: DB[language].contact.body}}/>          </TextBox>
+            <p dangerouslySetInnerHTML={{__html: DB[language].contact.body}}/>
+          </TextBox>
           <ButtonBlock buttons={socialMediaButtons} open={curSec==="contact"}/>
         </Section>
 
@@ -108,6 +118,7 @@ class App extends Component {
       observer.observe(document.querySelector(`#${x.id}`));
     });
 
+    // workaround for the annoying glitch at the beginning
     setTimeout(() => {
       this.setState({
         curSec: "home",

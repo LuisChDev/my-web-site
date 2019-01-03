@@ -13,7 +13,8 @@ const StyledSection = styled.div`
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 100vh;
+  overflow: hidden;
+  min-height: ${({adjusted}) => adjusted?'0':'100vh'};
   width: auto;
 `;
 

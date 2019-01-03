@@ -69,22 +69,18 @@ const sectionConf = {
  */
 const sections = [
   {
-    text: "Home",
     url: "#home",
     id: "home",
   },
   {
-    text: "Skills",
     url: "#skills",
     id: "skills",
   },
   {
-    text: "Projects",
     url: "#projects",
     id: "projects",
   },
   {
-    text: "Contact",
     url: "#contact",
     id: "contact",
   },

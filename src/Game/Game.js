@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {StyledRow, StyledCell, StyledGame, GridWrapper,
-        Instructions} from './style.js';
+import {StyledRow, StyledCell, StyledGame,
+        Instructions, Landscape} from './style.js';
 import Player from './Sprite/Player/Player.js';
 import Hammer from './Sprite/Hammer/Hammer.js';
 import BrickWall from './Sprite/BrickWall/BrickWall.js';
@@ -36,38 +36,50 @@ class Game extends Component {
       let keyName = event.key;
       this.handleKeypress.call(this, keyName);
     });
+
+    window.addEventListener("click", (event) => {
+      let clickCoords = [event.screenY, event.screenX];
+      this.handleClick(clickCoords, false);
+    });
+
+    window.addEventListener("dblclick", (event) => {
+      let clickCoords = [event.screenY, event.screenX];
+      this.handleClick(clickCoords, true);
+    });
   }
 
   render() {
     const {grid, objects,
            playPos, playerPose, playerFace, attacking} = this.state;
-    const {instructions} = this.props;
+    const {instructions, mobile} = this.props;
     return (
       <StyledGame>
         {/*Instructions*/}
         <Instructions>
           <p>{instructions}</p>
         </Instructions>
+        <Instructions mobile>
+          <p>{mobile}</p>
+        </Instructions>
+
         {/*terrain*/}
-        <GridWrapper>
           {grid.map((x,i) =>
                     <StyledRow key={i}>
                       {x.map((y,j) =>
                              <StyledCell bkg={y} key={j}/>)}
                     </StyledRow>)}
-        </GridWrapper>
+
         {/*objects*/}
-        <GridWrapper>
           {objects.map((x,i) =>
-                       <StyledRow key={i}>
-                         {x.map((y,j) =>
+                         x.map((y,j) =>
                                 (objects[i][j].name==="brickWall"
                                  ?<BrickWall pose={
                                    objects[i][j].beingBroken?"breaking":""
                                  } key={j} position={{x:j, y:i}}/>
-                                 :""))}
-                       </StyledRow>)}
-        </GridWrapper>
+                                 :""))
+                       )}
+
+        {/*entities*/}
         <Player playPos={playPos}
                 pose={playerPose? "zig":"zag"}
                 playerFace={playerFace}/>
@@ -80,41 +92,83 @@ class Game extends Component {
 
   handleKeypress(keyName) {
     if (keyName==='a' || keyName==='d') {
-      this.movePlayerX(keyName==='d');
+      this.movePlayerX(keyName==='d', true);
     } else if (keyName ==='w' || keyName==='s') {
-      this.movePlayerY(keyName==='s');
+      this.movePlayerY(keyName==='s', true);
     } else if (keyName === 'p') {
       this.attack();
     }
   }
 
-  movePlayerX(right) {
+  handleClick(coords, doubleClick) {
+    const {playPos} = this.state;
+    // calculate the cell the click was made on
+    const vmax = () => Math.max(window.innerHeight, window.innerWidth)/100;
+
+    // substract the height of the first section
+    let adjCoords = [coords[0] + window.scrollY - window.innerHeight,
+                     coords[1]];
+    // get coords of click on board from the pixel coordinates
+    let position = [Math.floor(adjCoords[0]/(vmax()*4)) - 3,
+                    Math.floor(adjCoords[1]/(vmax()*4))];
+
+    console.log(position);
+    //   if click was on cell in neighborhood:
+    // TODO: kindly do the needful (fix this horrible trash)
+    if ([JSON.stringify([playPos[0], playPos[1] + 1]),
+         JSON.stringify([playPos[0], playPos[1] - 1])]
+        .indexOf(JSON.stringify(position)) >= 0) {
+      if (doubleClick) {
+        this.movePlayerX(position[1] > playPos[1], false);
+        this.attack();
+        return "finished";
+      } else {
+        this.movePlayerX(position[1] > playPos[1], true);
+      }
+    } else if ([JSON.stringify([playPos[0] + 1, playPos[1]]),
+                JSON.stringify([playPos[0] - 1, playPos[1]])]
+               .indexOf(JSON.stringify(position)) >= 0) {
+      if (doubleClick) {
+        this.movePlayerY(position[0] > playPos[0], false);
+        this.attack();
+        return "finished";
+      } else {
+        this.movePlayerY(position[0] > playPos[0], true);
+      }
+    }
+  }
+
+  movePlayerX(right, changePos) {
     const {playPos, grid, objects, playerPose} = this.state;
     this.setState({
       playerFace: (right? "right":"left"),
     });
-    const nextPos = [playPos[0], playPos[1] + (right? 1:-1)];
-    if (grid[nextPos[0]][nextPos[1]].walkable &&
-       objects[nextPos[0]][nextPos[1]].walkable) {
-      this.setState({
-        playPos: nextPos,
-        playerPose: !playerPose,
-      });
+    if (changePos) {
+      const nextPos = [playPos[0], playPos[1] + (right? 1:-1)];
+      if (grid[nextPos[0]][nextPos[1]].walkable &&
+          objects[nextPos[0]][nextPos[1]].walkable) {
+        this.setState({
+          playPos: nextPos,
+          playerPose: !playerPose,
+        });
+      }
     }
   }
 
-  movePlayerY(down) {
+  movePlayerY(down, changePos) {
     const {playPos, grid, objects, playerPose} = this.state;
     this.setState({
       playerFace: (down? "down":"up"),
     });
-    const nextPos = [playPos[0] + (down? 1:-1), playPos[1]];
-    if (grid[nextPos[0]][nextPos[1]].walkable &&
-        objects[nextPos[0]][nextPos[1]].walkable) {
-      this.setState({
-        playPos: nextPos,
-        playerPose: !playerPose,
-      });
+    if (changePos) {
+      const nextPos = [playPos[0] + (down? 1:-1), playPos[1]];
+      if (grid[nextPos[0]][nextPos[1]].walkable &&
+          objects[nextPos[0]][nextPos[1]].walkable) {
+        this.setState({
+          playPos: nextPos,
+          playerPose: !playerPose,
+        });
+      }
     }
   }
 
@@ -126,7 +180,6 @@ class Game extends Component {
     });
     setTimeout(() => {
       this.setState({
-
         attacking: false,
       });
     }, 300);
