@@ -33,7 +33,7 @@ libraries I know, and can use in building your next hit website.`,
     contact: {
       title: "Contact me",
       body: `I try to keep up with events in Twitter and Stackoverflow. Checkout
-some of my projects on Github. You can also mail me using the link to the left.`,
+some of my projects on Github. You can also mail me using the link on this page.`,
     },
 
     skillList: [
@@ -131,7 +131,7 @@ some of my projects on Github. You can also mail me using the link to the left.`
       title: "Contáctame",
       body: `Trato de mantenerme al tanto de las cosas en Twitter y
       stackOverflow. Puedes ver algunos de mis proyectos en Github. También
-      puedes enviarme un correo usando el enlace a la izquierda.`,
+      puedes enviarme un correo usando el enlace en esta página.`,
     },
 
     skillList: [

@@ -6,24 +6,24 @@ import {playerSprite} from '../../../style.js';
 const posedPlayer = posed.div({
   // zig zag
   zig: {
-    x: ({playPos}) => `${playPos[1]*1.98}vw`,
-    y: ({playPos}) => `${playPos[0]*5}vh`,
+    x: ({playPos}) => `${playPos[1]*2}vmax`,
+    y: ({playPos}) => `${playPos[0]*2}vmax`,
   },
   zag: {
-    x: ({playPos}) => `${playPos[1]*1.98}vw`,
-    y: ({playPos}) => `${playPos[0]*5}vh`,
+    x: ({playPos}) => `${playPos[1]*2}vmax`,
+    y: ({playPos}) => `${playPos[0]*2}vmax`,
   },
 });
 
 const StyledPlayer = styled(posedPlayer)`
   position: absolute;
   z-index: 10;
-  width: 4vw;
-  height: 10vh;
-  top: ${({playPos}) => playPos[0]*5}vh;
-  left: ${({playPos}) => playPos[1]*2}vw;
+  width: 4vmax;
+  height: 4vmax;
+  top: ${({playPos}) => playPos[0]*2}vmax;
+  left: ${({playPos}) => playPos[1]*2}vmax;
   background-image: url(${({playerFace}) => playerSprite[playerFace]});
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
 `;
 

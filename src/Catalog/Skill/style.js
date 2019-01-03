@@ -15,6 +15,10 @@ const StyledSkill = styled.div`
   width: 45vw;
   min-height: 20vh;
   font-family: Verdana, Sans-serif;
+
+  @media (max-width: 700px) {
+    width: auto;
+  }
 `;
 
 export default StyledSkill;
