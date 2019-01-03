@@ -40,8 +40,17 @@ const Instructions = styled.div`
   z-index: 100;
 
   @media screen and (max-width: 700px) {
-    width: auto;
+    display: none;
   }
+
+  ${({mobile}) => mobile && css`
+    @media screen and (max-width: 700px) {
+      display: block;
+    }
+    @media screen and (min-width: 700px) {
+      display: none;
+    }
+  `}
 `;
 
 export {StyledRow, StyledCell, StyledGame, Instructions};

@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div>
         <Navbar
-          items={[...sections]} langs={langs}
+          items={[...sections]} langs={langs} text={DB[language].navbar}
           handleLang={(lang) => this.handleLang(lang)}/>
 
         <Section itemId="home" open={curSec==="home"}>
@@ -65,7 +65,8 @@ class App extends Component {
               Move your phone sideways to play!
             </h1>
           </Warning>
-          <Game instructions={DB[language].skills.title}/>
+          <Game instructions={DB[language].skills.title}
+                mobile={DB[language].skills.mobile}/>
         </Section>
 
         <Section itemId="projects" open={curSec==="projects"}>

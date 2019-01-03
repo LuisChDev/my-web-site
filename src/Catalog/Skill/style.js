@@ -10,7 +10,7 @@ const StyledSkill = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   width: 45vw;
   min-height: 20vh;
@@ -20,5 +20,6 @@ const StyledSkill = styled.div`
     width: auto;
   }
 `;
+
 
 export default StyledSkill;

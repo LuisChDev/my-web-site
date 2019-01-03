@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyledCatalog, StyledButton} from './style.js';
+import {StyledCatalog, StyledButton, StyledBts} from './style.js';
 import Skill from './Skill/Skill.js';
 
 /**
@@ -30,14 +30,15 @@ class Catalog extends Component {
                 pose={pose}
                 turns={turns}
               />
-        <div>
+
+        <StyledBts>
           <StyledButton onClick={this.handleBack}>
             {buttons.back}
           </StyledButton>
           <StyledButton onClick={this.handleForward}>
             {buttons.forward}
           </StyledButton>
-        </div>
+        </StyledBts>
       </StyledCatalog>
     );
   }
