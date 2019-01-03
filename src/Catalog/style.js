@@ -15,6 +15,10 @@ const StyledCatalog = styled.div`
   min-height: 100vh;
   color: white;
   background-color: rgba(0,0,0,0.5);
+
+  @media (max-width: 700px) {
+    width: auto;
+  }
 `;
 
 const StyledButton = styled.button`

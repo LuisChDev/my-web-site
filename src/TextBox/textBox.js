@@ -4,10 +4,10 @@ import StyledTextBox from './style.js';
 /**
  * TextBoxes get so big because they have no natural predators
  */
-const TextBox = (props) => {
+const TextBox = ({open, children, pose}) => {
   return (
-    <StyledTextBox pane={props.pane} pose={props.open?"open":"closed"}>
-      {props.children}
+    <StyledTextBox pose={pose?"open":"closed"}>
+      {children}
     </StyledTextBox>
   );
 };

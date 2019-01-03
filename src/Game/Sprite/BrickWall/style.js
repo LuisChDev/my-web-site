@@ -12,13 +12,12 @@ const PosedBrickWall = posed.div({
 });
 
 const StyledBrickWall = styled.div`
-  display: table-cell;
-  background-size: contain;
   position: absolute;
-  height: 9.6vh;
-  width: 4vw;
-  top: ${({position}) => position.y*10}vh;
-  left: ${({position}) => position.x*3.96}vw;
+  background-size: contain;
+  height: 4vmax;
+  width: 4vmax;
+  top: ${({position}) => position.y*4.15}vmax;
+  left: ${({position}) => position.x*3.96}vmax;
   background-image: url(${tileGridConf.brick});
 `;
 

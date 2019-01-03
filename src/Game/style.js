@@ -8,19 +8,20 @@ const StyledRow = styled.div`
 
 const StyledCell = styled.div`
   display: table-cell;
-  height: 9.6vh;
-  width: 4vw;
   border: 1px solid #000;
+  height: 4vmax;
   z-index: -1;
   background-image: url(${({bkg}) => tileGridConf[bkg.name]})};
+  background-repeat: no-repeat;
+  background-size: 100%;
 `;
 
 const StyledGame = styled.div`
   position: relative;
-`;
 
-const GridWrapper = styled.div`
-  position: absolute;
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
 `;
 
 // I'll try placing the instructions here
@@ -37,6 +38,10 @@ const Instructions = styled.div`
   overflow: hidden;
   margin: 50px 20px 20px 20px;
   z-index: 100;
+
+  @media screen and (max-width: 700px) {
+    width: auto;
+  }
 `;
 
-export {StyledRow, StyledCell, StyledGame, GridWrapper, Instructions};
+export {StyledRow, StyledCell, StyledGame, Instructions};

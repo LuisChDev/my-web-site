@@ -9,12 +9,12 @@ import posed from 'react-pose';
  */
 const PosedTextBox = posed.div({
   closed: {
-    height: "0vh",
+    height: "0",
   },
   open: {
-    height: "80vh",
+    height: "auto",
     transition: {
-      duration: 3000,
+      duration: 1000,
     }
   },
 });
@@ -32,6 +32,10 @@ const StyledTextBox = styled(PosedTextBox)`
   overflow: hidden;
   ${/*navbar offset*/''}
   margin: 50px 20px 20px 20px;
+
+  @media (max-width: 700px) {
+    width: auto;
+  }
 `;
 
 export default StyledTextBox;
