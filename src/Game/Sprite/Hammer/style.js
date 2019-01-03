@@ -6,26 +6,26 @@ import {hammerSprite} from '../../../style.js';
 const posedHammer = posed.div({
   // zig zag
   zig: {
-    x: ({playPos}) => `${playPos[1]*2}vw`,
-    y: ({playPos}) => `${playPos[0]*5}vh`,
+    x: ({playPos}) => `${playPos[1]*1.98}vmax`,
+    y: ({playPos}) => `${playPos[0]*1.98}vmax`,
   },
   zag: {
-    x: ({playPos}) => `${playPos[1]*2}vw`,
-    y: ({playPos}) => `${playPos[0]*5}vh`,
+    x: ({playPos}) => `${playPos[1]*1.98}vmax`,
+    y: ({playPos}) => `${playPos[0]*1.98}vmax`,
   },
   attacking: {
     x: ({playPos,
          playerFace}) => { return (
            (playPos[1]*2 + (["right","left"]
                             .indexOf(playerFace)>-1?(
-                              playerFace==="right"?2:-2):0)) + "vw"
+                              playerFace==="right"?2:-2):0)) + "vmax"
          );
                          },
     y: ({playPos,
          playerFace}) => { return(
-           (playPos[0]*5 + (["down","up"]
+           (playPos[0]*2 + (["down","up"]
                             .indexOf(playerFace)>-1?(
-                              playerFace==="down"?5:-5):0)) + "vh"
+                              playerFace==="down"?2:-2):0)) + "vmax"
          );
                          }
   }
@@ -34,12 +34,12 @@ const posedHammer = posed.div({
 const StyledHammer = styled(posedHammer)`
   position: absolute;
   z-index: 8;
-  width: 4vw;
-  height: 10vh;
-  top: ${({playPos}) => playPos[0]*5}vh;
-  left: ${({playPos}) => playPos[1]*2}vw;
+  width: 4vmax;
+  height: 4vmax;
+  top: ${({playPos}) => playPos[0]*2}vmax;
+  left: ${({playPos}) => playPos[1]*2}vmax;
   background-image: url(${({playerFace}) => hammerSprite[playerFace]});
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
 `;
 

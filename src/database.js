@@ -1,5 +1,11 @@
 const DB = {
   english: {
+    navbar: {
+      home: "Home",
+      skills: "Game",
+      projects: "My Skills",
+      contact: "Contact me",
+    },
     home: {
       title: "Get Things Done.",
       body: `Hello. My name is Luis (without the 'o'), and I like to Get Things
@@ -15,6 +21,8 @@ const DB = {
 
     skills: {
       title: "WASD to move. P to crush. destroy all the bricks!",
+      mobile: `Click on a nearby block to move. double click to attack. destroy
+all the bricks!`
     },
 
     projects: {
@@ -33,7 +41,7 @@ libraries I know, and can use in building your next hit website.`,
     contact: {
       title: "Contact me",
       body: `I try to keep up with events in Twitter and Stackoverflow. Checkout
-some of my projects on Github. You can also mail me using the link to the left.`,
+some of my projects on Github. You can also mail me using the link on this page.`,
     },
 
     skillList: [
@@ -96,6 +104,12 @@ some of my projects on Github. You can also mail me using the link to the left.`
   },
 
   español: {
+    navbar: {
+      home: "Inicio",
+      skills: "Juego",
+      projects: "Mis Habilidades",
+      contact: "Contáctame",
+    },
     home: {
       title: "Hacer Las Cosas.",
       body: `Hola. My nombre es Luis. y me gusta Hacer Las Cosas™. (Suena mejor
@@ -111,6 +125,8 @@ some of my projects on Github. You can also mail me using the link to the left.`
 
     skills: {
       title: "WASD para moverte. P para atacar. Destruye todos los ladrillos!",
+      mobile: `Click en un espacio cercano para moverte. Doble click para
+atacar. Destruye todos los ladrillos!`,
     },
 
     projects: {
@@ -131,7 +147,7 @@ some of my projects on Github. You can also mail me using the link to the left.`
       title: "Contáctame",
       body: `Trato de mantenerme al tanto de las cosas en Twitter y
       stackOverflow. Puedes ver algunos de mis proyectos en Github. También
-      puedes enviarme un correo usando el enlace a la izquierda.`,
+      puedes enviarme un correo usando el enlace en esta página.`,
     },
 
     skillList: [

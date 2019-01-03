@@ -12,19 +12,6 @@ const CubeWrapper = styled.div`
   perspective-origin: 50% 50%;
 `;
 
-/**
- * animation, how the cube should look
- */
-const cubeMotion = keyframes`
-  from {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-`;
-
 const AnimCube = posed.div({
   grown: { scale: 1.0,
            rotateX: ({turns}) => `${360*turns}deg`,
@@ -55,8 +42,8 @@ const AnimCube = posed.div({
 const StyledCube = styled(AnimCube)`
   margin: auto;
   position: relative;
-  height: 16vw;
-  width: 16vw;
+  height: 30vmin;
+  width: 30vmin;
   transform-style: preserve-3d;
 `;
 
@@ -78,9 +65,9 @@ const StyledFace = styled.div`
   background-size: 100px 100px;
   background-repeat: no-repeat;
   background-position: center;
-  ${props => css`
-    transform: translate${props.t}(${props.td}vw) rotate${props.r}(${props.rd}deg);
-    background-color: ${cubeColors[props.i]};
+  ${({t, td, r, rd, i}) => css`
+    transform: translate${t}(${td}vmin) rotate${r}(${rd}deg);
+    background-color: ${cubeColors[i]};
   `}
 `;
 

@@ -10,11 +10,16 @@ const StyledSkill = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   width: 45vw;
   min-height: 20vh;
   font-family: Verdana, Sans-serif;
+
+  @media (max-width: 700px) {
+    width: auto;
+  }
 `;
+
 
 export default StyledSkill;

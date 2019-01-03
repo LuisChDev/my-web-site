@@ -12,16 +12,31 @@ const StyledCatalog = styled.div`
   border-style: groove;
   border-color: sandybrown;
   border-width: 5px;
-  min-height: 100vh;
   color: white;
   background-color: rgba(0,0,0,0.5);
+
+  @media (max-width: 700px) {
+    width: auto;
+  }
 `;
 
 const StyledButton = styled.button`
   border-color: #66023C;
   border-width: 5px;
+  border-radius: 10%;
   min-width: 100px;
   min-height: 50px;
+  background-color: #7042014;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+    background-color: goldenrod;
+  }
 `;
 
-export {StyledCatalog, StyledButton};
+const StyledBts = styled.div`
+  flex-grow: 3;
+`;
+
+export {StyledCatalog, StyledButton, StyledBts};

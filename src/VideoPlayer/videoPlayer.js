@@ -7,16 +7,20 @@ import {StyledVideo, videoConfig, BkgVideo} from './style.js';
 class VideoPlayer extends Component {
   constructor() {
     super();
-    this.handleScroll = this.handleScroll.bind(this);
     this.videoRef = React.createRef();
   }
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+  // stopping or restarting the playback
+  componentDidUpdate(prevProps) {
+    const {pose} = this.props;
+    if (pose !== prevProps.pose) {
+      if (!pose) {
+        this.videoRef.current.pause();
+      } else {
+        this.videoRef.current.play();
+      }
+    }
   }
 
   render() {
@@ -28,26 +32,6 @@ class VideoPlayer extends Component {
         <source src={videoConfig.video} type="video/webm"/>
       </StyledVideo>
     );
-  }
-  /* if window scroll position is greater than video bottom position:
-   *   pause video
-   * else:
-   *   if video already playing:
-   *     do nothing
-   *   else:
-   *     play video
-   */
-  handleScroll() {
-    let {top, bottom} = this.videoRef.current.getBoundingClientRect();
-    let {paused} = this.videoRef.current;
-    if (window.scrollY > bottom) {
-      this.videoRef.current.pause();
-    }
-    else {
-      if (paused) {
-        this.videoRef.current.play();
-      }
-    }
   }
 };
 
