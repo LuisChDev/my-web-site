@@ -25,10 +25,10 @@ const StyledTextBox = styled(PosedTextBox)`
   background: rgba(0,0,0,0.5);
   color: white;
   padding: 10px;
+  width: 40vw;
   font-size: large;
   font-family: Verdana, Sans-serif;
   float: right;
-  width: 45vw;
   overflow: hidden;
   ${/*navbar offset*/''}
   margin: 50px 20px 20px 20px;

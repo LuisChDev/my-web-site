@@ -56,24 +56,28 @@ const Instructions = styled.div`
 const Controls = styled.div`
   position: absolute;
   bottom: 0;
+  left: 0;
   right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25vw;
   max-height: 4vmax;
   background: rgba(0,0,0,0.5);
   color: white;
   font-size: large;
   font-family: Verdana, Sans-serif;
   display: none;
-  float: left;
   overflow: hidden;
 
   @media screen and (max-width: 750px) {
-    display: float;
+    display: block;
   }
 `;
 
 const SBttn = styled.button`
   border-radius: 10%;
   background-color: orange;
+  height: 4vmax;
   color: white;
   ${({attack}) => attack && css`
     background-color: blue;
