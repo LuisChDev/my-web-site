@@ -40,6 +40,7 @@ class App extends Component {
       language: "english",
     };
   }
+
   render() {
     let {curSec, language} = this.state;
     return (
@@ -62,7 +63,7 @@ class App extends Component {
           {/* skills section */}
           <Warning>
             <h1>
-              Move your phone sideways to play!
+              {DB[language].skills.warning}
             </h1>
           </Warning>
           <Game instructions={DB[language].skills.title}

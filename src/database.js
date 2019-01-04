@@ -20,9 +20,10 @@ const DB = {
     },
 
     skills: {
+      warning: "Move your phone sideways to play!",
       title: "WASD to move. P to crush. destroy all the bricks!",
-      mobile: `Click on a nearby block to move. double click to attack. destroy
-all the bricks!`
+      mobile: `Press the arrow keys to move. Use the blue button to attack.
+destroy all the bricks!`
     },
 
     projects: {
@@ -124,9 +125,10 @@ some of my projects on Github. You can also mail me using the link on this page.
     },
 
     skills: {
+      warning: "Pon tu celular de lado para jugar!",
       title: "WASD para moverte. P para atacar. Destruye todos los ladrillos!",
-      mobile: `Click en un espacio cercano para moverte. Doble click para
-atacar. Destruye todos los ladrillos!`,
+      mobile: `Toca las flechas para moverte. Presiona el botón azul para atacar.
+ destruye todos los ladrillos!`,
     },
 
     projects: {
