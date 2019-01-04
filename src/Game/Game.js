@@ -37,16 +37,6 @@ class Game extends Component {
       let keyName = event.key;
       this.handleKeypress.call(this, keyName);
     });
-
-    window.addEventListener("click", (event) => {
-      let clickCoords = [event.screenY, event.screenX];
-      this.handleClick(clickCoords, false);
-    });
-
-    window.addEventListener("dblclick", (event) => {
-      let clickCoords = [event.screenY, event.screenX];
-      this.handleClick(clickCoords, true);
-    });
   }
 
   render() {

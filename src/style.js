@@ -11,8 +11,8 @@
 import mapBkg from '../src/media/map-backgrnd.jpg';
 import africaMapBkg from '../src/media/africa_map_backgrnd.jpg';
 import vintageMyspaceBkg from '../src/media/vintage-myspace-backgrnds.jpg';
-import vidPoster from '../src/media/vidCover.png';
-import vid from './media/stockDef.webm';
+import vidPoster from '../src/media/vidCover.jpg';
+import vid from './media/stockDef.mp4';
 
 // backgrounds for the tiles
 import bkFloor from './media/backgrounds/floor.jpg';
