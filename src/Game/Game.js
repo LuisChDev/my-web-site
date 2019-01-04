@@ -1,6 +1,7 @@
+
 import React, {Component} from 'react';
 import {StyledRow, StyledCell, StyledGame,
-        Instructions, Landscape} from './style.js';
+        Instructions, Landscape, Controls, SBttn} from './style.js';
 import Player from './Sprite/Player/Player.js';
 import Hammer from './Sprite/Hammer/Hammer.js';
 import BrickWall from './Sprite/BrickWall/BrickWall.js';
@@ -86,6 +87,15 @@ class Game extends Component {
         <Hammer playPos={playPos}
                 pose={attacking?"attacking":(playerPose?"zig":"zag")}
                 playerFace={playerFace}/>
+
+        {/*controls (mobile only)*/}
+        <Controls>
+          <SBttn onClick={() => this.movePlayerX(false, true)}>◀</SBttn>
+          <SBttn onClick={() => this.movePlayerY(true, true)}>▼</SBttn>
+          <SBttn onClick={() => this.movePlayerY(false, true)}>▲</SBttn>
+          <SBttn onClick={() => this.movePlayerX(true, true)}>▶</SBttn>
+          <SBttn attack onClick={() => this.attack()}>⚔</SBttn>
+        </Controls>
       </StyledGame>
     );
   }
@@ -97,44 +107,6 @@ class Game extends Component {
       this.movePlayerY(keyName==='s', true);
     } else if (keyName === 'p') {
       this.attack();
-    }
-  }
-
-  handleClick(coords, doubleClick) {
-    const {playPos} = this.state;
-    // calculate the cell the click was made on
-    const vmax = () => Math.max(window.innerHeight, window.innerWidth)/100;
-
-    // substract the height of the first section
-    let adjCoords = [coords[0] + window.scrollY - window.innerHeight,
-                     coords[1]];
-    // get coords of click on board from the pixel coordinates
-    let position = [Math.floor(adjCoords[0]/(vmax()*4)) - 3,
-                    Math.floor(adjCoords[1]/(vmax()*4))];
-
-    console.log(position);
-    //   if click was on cell in neighborhood:
-    // TODO: kindly do the needful (fix this horrible trash)
-    if ([JSON.stringify([playPos[0], playPos[1] + 1]),
-         JSON.stringify([playPos[0], playPos[1] - 1])]
-        .indexOf(JSON.stringify(position)) >= 0) {
-      if (doubleClick) {
-        this.movePlayerX(position[1] > playPos[1], false);
-        this.attack();
-        return "finished";
-      } else {
-        this.movePlayerX(position[1] > playPos[1], true);
-      }
-    } else if ([JSON.stringify([playPos[0] + 1, playPos[1]]),
-                JSON.stringify([playPos[0] - 1, playPos[1]])]
-               .indexOf(JSON.stringify(position)) >= 0) {
-      if (doubleClick) {
-        this.movePlayerY(position[0] > playPos[0], false);
-        this.attack();
-        return "finished";
-      } else {
-        this.movePlayerY(position[0] > playPos[0], true);
-      }
     }
   }
 

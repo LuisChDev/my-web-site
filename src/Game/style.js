@@ -37,20 +37,47 @@ const Instructions = styled.div`
   float: right;
   overflow: hidden;
   margin: 50px 20px 20px 20px;
-  z-index: 100;
+  z-index: 5;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 750px) {
     display: none;
   }
 
   ${({mobile}) => mobile && css`
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 750px) {
       display: block;
     }
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 750px) {
       display: none;
     }
   `}
 `;
 
-export {StyledRow, StyledCell, StyledGame, Instructions};
+const Controls = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 4vmax;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: large;
+  font-family: Verdana, Sans-serif;
+  display: none;
+  float: left;
+  overflow: hidden;
+
+  @media screen and (max-width: 750px) {
+    display: float;
+  }
+`;
+
+const SBttn = styled.button`
+  border-radius: 10%;
+  background-color: orange;
+  color: white;
+  ${({attack}) => attack && css`
+    background-color: blue;
+  `}
+`;
+
+export {StyledRow, StyledCell, StyledGame, Instructions, Controls, SBttn};
