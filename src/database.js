@@ -6,17 +6,14 @@ const DB = {
       projects: "My Skills",
       contact: "Contact me",
     },
+
     home: {
       title: "Get Things Done.",
-      body: `Hello. My name is Luis (without the 'o'), and I like to Get Things
-      Done™. I try, at least. Welcome to my website. It only took me <s> four
-      months</s> three weeks or so to get this website up and running, and I'll
-      get YOUR website online just as fast. <u>As long as I get my coffee that
-      is.</u> Did I mention I like to have coffee near midnight? Anyway, I'm
-      currently enrolled at the FreeCodeCamp Institution, and LOVING every
-      second of it. I do all kinds of coding, from the servers to the browsers,
-      all the way to tweaking the text editor to my liking. The next page will
-      illustrate this.`,
+      body: `Hi. My name is Luis (without the 'o'). I'm an up-and-coming
+developer, specializing in web front and back ends. For two years now, I've
+devoted myself to learning all there is to putting websites together, from the
+user interface to the server logic. Here you can check out my programming chops
+and decide if I'm a good fit for your project.`,
     },
 
     skills: {
@@ -82,18 +79,10 @@ some of my projects on Github. You can also mail me using the link on this page.
        logo: "git",
       },
 
-      {name: "PostgreSQL",
-       description: "Perhaps the most comprehensive relational " +
-       "database engine employed in mainstream applications. It complies " +
-       "faithfully to the SQL specification, while allowing to easily scale " +
-       "up to larger userbases.",
-       logo: "postgresql",
-      },
-
-      {name: "MySQL",
-       description: "This relational database engine is wildly popular and " +
-       "serves many websites around the world.",
-       logo: "mysql",
+      {name: "SQL databases",
+       description: `Relational databases are the backbone of most of today's
+websites. Nowadays we mainly employ servers like MySQL, Postgres, or SQLite.`,
+       logo: "sql",
       },
 
       {name: "React.js",
@@ -111,17 +100,14 @@ some of my projects on Github. You can also mail me using the link on this page.
       projects: "Mis Habilidades",
       contact: "Contáctame",
     },
+
     home: {
-      title: "Hacer Las Cosas.",
-      body: `Hola. My nombre es Luis. y me gusta Hacer Las Cosas™. (Suena mejor
-      en inglés :/) Bienvenido a mi sitio web. Sólo me tomó <s>cuatro meses</s>
-      tres semanas más o menos terminar y montar este sitio, y puedo poner TU
-      sitio en línea igual de rápido. <u>Siempre y cuando me tome mi café</u>.
-      ¿Mencioné que tomo café a las doce de la noche? De todas formas, Estoy
-      estudiiando ahora mismo en FreeCodeCamp.org y <b>disfrutando</b> cada
-      segundo. Hago todo tipo de programas, del servidor al navegador,
-      hasta modificar el editor de texto que uso en lo más mínimo. La
-      próxima página es una demostración.`,
+      title: "Haz Las Cosas.",
+      body: `Hola. Mi nombre es Luis. Soy un desarrollador entusiasta que se
+especializa en la Web, front-end y back-end. Por ya dos años, me he dedicado a
+aprender todo lo que hace falta para construir sitios web, de la interfaz de
+usuario a la lógica en el servidor. Aquí puedes descubrir mis habilidades de
+programación y decidir si soy una buena opción para tu proyecto.`,
     },
 
     skills: {
@@ -190,19 +176,11 @@ mundo.`,
        logo: "git",
       },
 
-      {name: "PostgreSQL",
-       description: `Quizá el motor de base de datos relacional más
-comprehensivo empleado en aplicaciones comerciales. cumple fielmente la
-especificación SQL, al mismo tiempo permitiendo escalar las aplicaciones
-a una mayor cantidad de usuarios.`,
-       logo: "postgresql",
-      },
-
-      {name: "MySQL",
-       description: `Este motor de base de datos relacional es muy popular y
-sirve a muchos sitios web alrededor del mundo.`,
-       logo: "mysql",
-      },
+      {name: "Bases de datos SQL",
+       description: `Las bases de datos relacionales forman la columna vertebral
+de la mayoría de los sitios web modernos. Hoy en día, se emplean principalmente
+servidores como MySQL, Postgres, o SQLite.`,
+       logo: "sql"},
 
       {name: "React.js",
        description: `Este framework web permite tener aplicaciones de una

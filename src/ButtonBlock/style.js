@@ -20,8 +20,8 @@ const PosedBlock = posed.div({
 const StyledBlock = styled(PosedBlock)`
   display: grid;
   grid-template-columns: 100px 100px;
+  margin: 60px;
   grid-gap: 20px;
-  padding: 20vh 20px;
   margin-left: 30px;
   max-width: 250px;
 `;
