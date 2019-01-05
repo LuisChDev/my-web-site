@@ -37,8 +37,7 @@ import cssIcon from './media/css3-icon.jpg';
 import gitIcon from './media/git-icon.png';
 import javascriptIcon from './media/javascript-icon.png';
 import pythonIcon from './media/python-icon.png';
-import mysqlIcon from './media/mysql-icon.png';
-import postgresqlIcon from './media/postgresql-icon.png';
+import sqlIcon from './media/SQL-icon.png';
 import reactIcon from './media/react-icon.svg';
 
 // images for the social media buttons
@@ -163,8 +162,7 @@ const cubeImages = {
   css: cssIcon,
   javascript: javascriptIcon,
   git: gitIcon,
-  postgresql: postgresqlIcon,
-  mysql: mysqlIcon,
+  sql: sqlIcon,
   react: reactIcon,
   python: pythonIcon,
 };

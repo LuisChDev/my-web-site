@@ -37,7 +37,7 @@ const Instructions = styled.div`
   float: right;
   overflow: hidden;
   margin: 50px 20px 20px 20px;
-  z-index: 5;
+  z-index: 11;
 
   @media screen and (max-width: 750px) {
     display: none;
@@ -60,7 +60,7 @@ const Controls = styled.div`
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 25vw;
+  width: 35vw;
   max-height: 4vmax;
   background: rgba(0,0,0,0.5);
   color: white;
@@ -77,6 +77,7 @@ const Controls = styled.div`
 const SBttn = styled.button`
   border-radius: 10%;
   background-color: orange;
+  min-width: 7vw;
   height: 4vmax;
   color: white;
   ${({attack}) => attack && css`

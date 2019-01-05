@@ -82,9 +82,9 @@ class Game extends Component {
         <Controls>
           <SBttn onClick={() => this.movePlayerX(false, true)}>◀</SBttn>
           <SBttn onClick={() => this.movePlayerY(true, true)}>▼</SBttn>
+          <SBttn attack onClick={() => this.attack()}>⚔</SBttn>
           <SBttn onClick={() => this.movePlayerY(false, true)}>▲</SBttn>
           <SBttn onClick={() => this.movePlayerX(true, true)}>▶</SBttn>
-          <SBttn attack onClick={() => this.attack()}>⚔</SBttn>
         </Controls>
       </StyledGame>
     );
