@@ -44,7 +44,6 @@ import reactIcon from './media/react-icon.svg';
 import githubIcon from './media/github-icon.png';
 import stackOverflowIcon from './media/stackOverflow-icon.png';
 import mailIcon from './media/mail-icon.png';
-import twitterIcon from './media/twitter-icon.png';
 
 // flags for the languages
 import esFlag from './media/flags/spain.png';
@@ -139,12 +138,9 @@ const socialMediaButtons = [
   {name: "Stack Overflow",
    image: stackOverflowIcon,
    link: "https://stackoverflow.com/users/7658923/luis-ch"},
-  {name: "Twitter",
-   image: twitterIcon,
-   link: "https://twitter.com/LuisChDev"},
   {name: "Mail me",
    image: mailIcon,
-   link: "mailto:luischdev@gmail.com"},
+   link: "mailto:luischa123@gmail.com"},
 ];
 
 /**
