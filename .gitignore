@@ -30,3 +30,6 @@ project-planning.org
 # stuff Emacs needs
 /**/.tern-port
 /**/*.elpackage-lock.json=false
+
+# emacs stuff
+**/*.el
