@@ -33,3 +33,5 @@ project-planning.org
 
 # emacs stuff
 **/*.el
+.envrc
+.log

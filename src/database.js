@@ -9,11 +9,10 @@ const DB = {
 
     home: {
       title: "Get Things Done.",
-      body: `Hi. My name is Luis (without the 'o'). I'm an up-and-coming
-developer, specializing in web front and back ends. For two years now, I've
-devoted myself to learning all there is to putting websites together, from the
-user interface to the server logic. Here you can check out my programming chops
-and decide if I'm a good fit for your project.`,
+      body: `My name is Luis. I'm a developer from Cartagena, Colombia.
+this is my personal website. take a look around and see if there's anything you
+like. I'm currently a student at the Universidad Tecnológica de Bolívar, but I'm
+interested in junior developer positions, starting in 2021.`,
     },
 
     skills: {
@@ -27,9 +26,9 @@ destroy all the bricks!`
       title: "Know my strengths",
       body: `Many different technologies are in use today, on the ever expanding
 tech ecosystem. I try to keep up with the latest in front-end technology, as
-well as back-end engines, databases and everything else. <s>They just keep
-coming</s> Here's a (non exhaustive) list of the frameworks, languages and
-libraries I know, and can use in building your next hit website.`,
+well as back-end engines, databases and everything else. Here's a (non exhaustive)
+ list of the frameworks, languages and libraries I know, and can use in building
+your next hit website.`,
       buttons: {
         back: "back",
         forward: "foward",
@@ -38,8 +37,9 @@ libraries I know, and can use in building your next hit website.`,
 
     contact: {
       title: "Contact me",
-      body: `I try to keep up with events in Twitter and Stackoverflow. Checkout
-some of my projects on Github. You can also mail me using the link on this page.`,
+      body: `I try to keep up with events in Github and Stackoverflow. Checkout
+some of my projects on my profile. You can also mail me using the link on this
+page.`,
     },
 
     skillList: [
@@ -102,12 +102,13 @@ websites. Nowadays we mainly employ servers like MySQL, Postgres, or SQLite.`,
     },
 
     home: {
-      title: "Haz Las Cosas.",
-      body: `Hola. Mi nombre es Luis. Soy un desarrollador entusiasta que se
-especializa en la Web, front-end y back-end. Por ya dos años, me he dedicado a
-aprender todo lo que hace falta para construir sitios web, de la interfaz de
-usuario a la lógica en el servidor. Aquí puedes descubrir mis habilidades de
-programación y decidir si soy una buena opción para tu proyecto.`,
+      title: "Resolviendo las Cosas.",
+      body: `Mi nombre es Luis. Soy un desarrollador de Cartagena, Colombia.
+Este es mi sitio web personal. Aquí puedes descubrir mis habilidades de
+programación y decidir si soy una buena opción para tu proyecto.
+Soy actualmente un estudiante en la Universidad Tecnológica de Bolívar, pero
+estoy interesado en posiciones de desarrollador Junior, empezando en 2021.
+`,
     },
 
     skills: {
@@ -122,7 +123,7 @@ programación y decidir si soy una buena opción para tu proyecto.`,
       body: `Muchas tecnologías diferentes están en uso hoy, en el ecosistema
       informático en constante expansión. Trato de mantenerme al tanto con lo
       último en sistemas front-end, así como motores back-end, bases de datos y
-      todo lo demás. <s>Nunca se acaban</s> Aquí ha una lista (no exhaustiva) de
+      todo lo demás. Aquí ha una lista (no exhaustiva) de
       los frameworks, lenguajes y bibliotecas que conozco, y puedo usar para
       construir tu próximo sitio exitoso.`,
       buttons: {
@@ -133,7 +134,7 @@ programación y decidir si soy una buena opción para tu proyecto.`,
 
     contact: {
       title: "Contáctame",
-      body: `Trato de mantenerme al tanto de las cosas en Twitter y
+      body: `Trato de mantenerme al tanto de las cosas en Github y
       stackOverflow. Puedes ver algunos de mis proyectos en Github. También
       puedes enviarme un correo usando el enlace en esta página.`,
     },
