@@ -20,6 +20,9 @@ import Catalog from './Catalog/Catalog.js';
 import ButtonBlock from './ButtonBlock/ButtonBlock.js';
 import Warning from './Warning/Warning.js';
 
+// Routing.
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+
 // styles.
 import {sections, socialMediaButtons, langs} from './style.js';
 
@@ -44,7 +47,7 @@ class App extends Component {
   render() {
     let {curSec, language} = this.state;
     return (
-      <div>
+      <Router>
         <Navbar
           items={[...sections]} langs={langs} text={DB[language].navbar}
           handleLang={(lang) => this.handleLang(lang)}/>
@@ -89,9 +92,10 @@ class App extends Component {
             <p dangerouslySetInnerHTML={{__html: DB[language].contact.body}}/>
           </TextBox>
           <ButtonBlock buttons={socialMediaButtons} open={curSec==="contact"}/>
-        </Section>
+          <a href="/Olimpica.html">Olímpica!</a>
 
-      </div>
+        </Section>
+      </Router>
     );
   }
 
@@ -129,4 +133,23 @@ class App extends Component {
 
 }
 
-export default App;
+/**
+ * wrapper that chooses the right app to display
+ */
+const AppWrap = () => (
+  <Router>
+    <Switch>
+      <Route path="/Olimpica.html">
+        <Router>
+          <h1>Página en construcción</h1>
+          <a href="/">Regresar</a>
+        </Router>
+      </Route>
+      <Route path="/">
+        <App/>
+      </Route>
+    </Switch>
+  </Router>
+);
+
+export default AppWrap;
