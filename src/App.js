@@ -92,7 +92,7 @@ class App extends Component {
             <p dangerouslySetInnerHTML={{__html: DB[language].contact.body}}/>
           </TextBox>
           <ButtonBlock buttons={socialMediaButtons} open={curSec==="contact"}/>
-          <a href="/Olimpica.html">Olímpica!</a>
+          <a href="/secret" style={{marginLeft: "30px"}}>!</a>
 
         </Section>
       </Router>
@@ -139,9 +139,12 @@ class App extends Component {
 const AppWrap = () => (
   <Router>
     <Switch>
-      <Route path="/Olimpica.html">
+      <Route path="/secret">
         <Router>
-          <h1>Página en construcción</h1>
+          <h1>Shh!</h1>
+          <p>
+            Esta página secreta está aquí para probar React Router.
+          </p>
           <a href="/">Regresar</a>
         </Router>
       </Route>
