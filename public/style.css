@@ -1,0 +1,157 @@
+:root {
+    --background: white;
+    --colorOlimp: #df0008;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+
+}
+
+.heading {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    color: var(--background);
+    font-size: small;
+    padding: 0.5em;
+}
+
+#mainbar {
+    display: flex;
+    background-color: var(--colorOlimp);
+    justify-content: space-between;
+    color: var(--background);
+}
+
+#main-logo {
+    max-height: 3em;
+}
+
+#mainbar-righthand {
+    display: flex;
+    font-size: small;
+}
+
+.mainbar-button {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    margin-right: 1em;
+    justify-content: center;
+}
+
+.icon {
+    max-height: 2em;
+    max-width: 2em;
+}
+
+#truck {
+    margin-bottom: 4.2px;
+}
+
+#navbar {
+    background-color: var(--background);
+}
+
+#categobutton {
+    background-color: transparent;
+    color: var(--colorOlimp);
+    font-size: 1.25em;
+    border: none;
+    padding: 0.5em;
+    padding-right: 10em;
+}
+
+#search-bar {
+    border-radius: 1em;
+    border-color: #e2001a;
+    border-style: solid;
+    width: 25em;
+}
+
+#spacefiller {
+    min-height: 8em;  /* exact height of the header */
+}
+
+#banner {
+    background-image: url("files/banner_noticiasDesk29ago.webp");
+    background-position: center;
+    min-height: 50vh;
+}
+
+#big-text {
+    margin-top: 0;
+    color: var(--background);
+    font-weight: lighter;
+    padding-left: 1.5em;
+    max-width: 10em;
+    font-size: 4em;
+}
+
+#main-container {
+    display: flex;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 2%;
+}
+
+#main-text {
+    flex-grow: 1;
+}
+
+.slideshow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.screenwide-sls {
+    justify-content: space-around;
+    margin-bottom: 2em;
+}
+
+.imagen-muestra {
+    display: block;
+    max-height: 35em;
+    max-width: 20em;
+    height: auto;
+    width: auto;
+}
+
+#populares {
+    min-width: 30%;
+    padding: 1em;
+}
+
+.populares {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.pop-text {
+    margin-left: 1em;
+    font-weight: lighter;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: small;
+    background-color: #36474f;
+}
+
+.footer-column {
+    color: var(--background);
+}
+
+.foot-colm-title {
+    color: #607d8b;
+}
+
