@@ -137,7 +137,7 @@ const socialMediaButtons = [
    link: "https://github.com/LuisChDev"},
   {name: "Stack Overflow",
    image: stackOverflowIcon,
-   link: "https://stackoverflow.com/users/76658923/luis-ch"},
+   link: "https://stackoverflow.com/users/7658923/luis-ch"},
   {name: "Mail me",
    image: mailIcon,
    link: "mailto:luischa123@gmail.com"},
