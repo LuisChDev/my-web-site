@@ -20,7 +20,7 @@ class Lang extends Component {
     const {handleChange} = this;
     return (
       <StyledLang onClick={this.handleClick}>
-        <StyledBtn>{`${lang} ▼`}</StyledBtn>
+        <StyledBtn><img src={flags[lang]} alt=""/>{`${lang} ▼`}</StyledBtn>
         <StyledCont open={open}>
           {langs.map(lang =>
                      <StyledItm onClick={() => handleChange(lang)}>
