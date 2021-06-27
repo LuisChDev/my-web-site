@@ -71,12 +71,12 @@ const sections = [
     id: "home",
   },
   {
-    url: "#skills",
-    id: "skills",
+    url: "#game",
+    id: "game",
   },
   {
-    url: "#projects",
-    id: "projects",
+    url: "#skills",
+    id: "skills",
   },
   {
     url: "#contact",

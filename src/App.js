@@ -62,8 +62,8 @@ class App extends Component {
           </TextBox>
         </Section>
 
-        <Section itemId="skills" adjusted>
-          {/* skills section */}
+        <Section itemId="game" adjusted>
+          {/* game section */}
           <Warning>
             <h1>
               {DB[language].skills.warning}
@@ -73,8 +73,8 @@ class App extends Component {
                 mobile={DB[language].skills.mobile}/>
         </Section>
 
-        <Section itemId="projects" open={curSec==="projects"}>
-          {/*projects section*/}
+        <Section itemId="skills" open={curSec==="skills"}>
+          {/*skills section*/}
           <TextBox>
             <h2>{DB[language].projects.title}</h2>
             <p dangerouslySetInnerHTML={{__html: DB[language].projects.body}}/>
@@ -84,6 +84,10 @@ class App extends Component {
             buttons={DB[language].projects.buttons}
           />
         </Section>
+
+        {/* <Section> */}
+        {/*   {/\* projects section *\/} */}
+        {/* </Section> */}
 
         <Section itemId="contact" open={curSec==="contact"}>
           {/*contact me section*/}

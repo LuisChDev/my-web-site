@@ -2,8 +2,8 @@ const DB = {
   english: {
     navbar: {
       home: "Home",
-      skills: "Game",
-      projects: "My Skills",
+      game: "Game",
+      skills: "My Skills",
       contact: "Contact me",
     },
 
@@ -96,8 +96,8 @@ websites. Nowadays we mainly employ servers like MySQL, Postgres, or SQLite.`,
   español: {
     navbar: {
       home: "Inicio",
-      skills: "Juego",
-      projects: "Mis Habilidades",
+      game: "Juego",
+      skills: "Mis Habilidades",
       contact: "Contáctame",
     },
 
