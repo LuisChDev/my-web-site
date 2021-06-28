@@ -5,6 +5,7 @@ const StyledCatalog = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
+  margin: 20px;
   padding: 20px;
   width: 45vw;
   overflow: hidden;

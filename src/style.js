@@ -57,8 +57,8 @@ const duration = 300;
  */
 const sectionConf = {
     home: null,
-    skills: mapBkg,
-    projects: africaMapBkg,
+    game: mapBkg,
+    skills: africaMapBkg,
     contact: vintageMyspaceBkg,
 };
 
