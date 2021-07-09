@@ -4,15 +4,18 @@ const DB = {
       home: "Home",
       game: "Game",
       skills: "My Skills",
+      experience: "Work Experience",
       contact: "Contact me",
     },
+
+    description: "Description",
 
     home: {
       title: "Get Things Done.",
       body: `My name is Luis. I'm a developer from Cartagena, Colombia.
 this is my personal website. take a look around and see if there's anything you
-like. I'm currently a student at the Universidad Tecnológica de Bolívar, but I'm
-interested in junior developer positions, starting in 2021.`,
+like. I'm about to graduate at the Universidad Tecnológica de Bolívar and I'm
+interested in front-end developer positions.`,
     },
 
     skills: {
@@ -37,9 +40,25 @@ your next hit website.`,
 
     contact: {
       title: "Contact me",
-      body: `I try to keep up with events in Github and Stackoverflow. Checkout
-some of my projects on my profile. You can also mail me using the link on this
-page.`,
+      body: `I try to keep up with events in LinkedIn, Github and Stackoverflow.
+ Check out some of the projects on my profile. You can also mail me using the
+ link on this page.`,
+    },
+
+    experience: {
+      title: "Work Experience",
+      description: "Take a look at some of the jobs I've held and the valuable " +
+        "experience I got from them.",
+      expList: [
+        {
+          name: "Aduanas Gama S.A.S.",
+          description: "Web & Mobile development. SCRUM environment. Joint effort together with other teams."
+        },
+        {
+          name: "Tomorrow Tech S.A.S.",
+          description: "Responsive Web development & SPAs. API integration. Client-facing work and communication.",
+        }
+      ],
     },
 
     skillList: [
@@ -98,16 +117,19 @@ websites. Nowadays we mainly employ servers like MySQL, Postgres, or SQLite.`,
       home: "Inicio",
       game: "Juego",
       skills: "Mis Habilidades",
+      experience: "Exp. Laboral",
       contact: "Contáctame",
     },
+
+    description: "Descripción: ",
 
     home: {
       title: "Resolviendo las Cosas.",
       body: `Mi nombre es Luis. Soy un desarrollador de Cartagena, Colombia.
 Este es mi sitio web personal. Aquí puedes descubrir mis habilidades de
 programación y decidir si soy una buena opción para tu proyecto.
-Soy actualmente un estudiante en la Universidad Tecnológica de Bolívar, pero
-estoy interesado en posiciones de desarrollador Junior, empezando en 2021.
+Estoy a poco de graduarme en la Universidad Tecnológica de Bolívar y
+estoy interesado en posiciones de desarrollador front-end.
 `,
     },
 
@@ -137,6 +159,22 @@ estoy interesado en posiciones de desarrollador Junior, empezando en 2021.
       body: `Trato de mantenerme al tanto de las cosas en Github y
       stackOverflow. Puedes ver algunos de mis proyectos en Github. También
       puedes enviarme un correo usando el enlace en esta página.`,
+    },
+
+    experience: {
+      title: "Experiencia Laboral",
+      description: "Aquí puedes ver algunos de los cargos que ejercido y la " +
+        "experiencia que obtuve en ellos.",
+      expList: [
+        {
+          name: "Aduanas Gama S.A.S.",
+          description: "Desarrollo web y móvil, entorno SCRUM, colaboración con otros equipos durante el desarrollo."
+        },
+        {
+          name: "Tomorrow Tech S.A.S.",
+          description: "Desarrollo web, Aplicaciones, interacción con APIs, trabajo con clientes y comunicación con los mismos.",
+        }
+      ],
     },
 
     skillList: [

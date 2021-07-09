@@ -19,6 +19,7 @@ import Game from './Game/Game.js';
 import Catalog from './Catalog/Catalog.js';
 import ButtonBlock from './ButtonBlock/ButtonBlock.js';
 import Warning from './Warning/Warning.js';
+import ExpSlider from './ExpSlider';
 
 // Routing.
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
@@ -46,6 +47,7 @@ class App extends Component {
 
   render() {
     let {curSec, language} = this.state;
+
     return (
       <Router>
         <Navbar
@@ -77,12 +79,31 @@ class App extends Component {
           {/*skills section*/}
           <TextBox>
             <h2>{DB[language].projects.title}</h2>
-            <p dangerouslySetInnerHTML={{__html: DB[language].projects.body}}/>
+            {/* <p dangerouslySetInnerHTML={{__html: DB[language].projects.body}}/> */}
+            <p>
+              {DB[language].projects.body}
+            </p>
           </TextBox>
           <Catalog
             skills={DB[language].skillList}
             buttons={DB[language].projects.buttons}
           />
+        </Section>
+
+        <Section itemId="experience" open={curSec==="experience"}>
+          {/* experience section */}
+          <TextBox>
+            <h2>{DB[language].experience.title}</h2>
+            <p>
+              {DB[language].experience.description}
+            </p>
+          </TextBox>
+          <div style={{
+            width: "50vw",
+            maxHeight: "50vh"
+          }}>
+            <ExpSlider lang={language} />
+          </div>
         </Section>
 
         {/* <Section> */}
