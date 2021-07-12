@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 const StyledCard = styled.div`
   background-color: rgba(0,0,0,0.5);
-  max-width: 40vw;
-  max-height: 70vh;
   color: white;
 `;
 
@@ -14,6 +12,10 @@ const StyledImg = styled.img`
 
 const StyledContainer = styled.div`
   margin: 3vh 3vw;
+  max-width: 50vw;
+  @media only screen and (max-width: 700px) {
+    max-width: unset;
+  }
 `;
 
 

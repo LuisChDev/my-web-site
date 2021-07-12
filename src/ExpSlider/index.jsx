@@ -14,7 +14,7 @@ const ExpSlider = ({ lang }) => {
 
   return (
     <StyledContainer>
-      <Carousel infiniteLoop width="70%">
+      <Carousel infiniteLoop>
         <StyledCard>
           <StyledImg alt="" src={tomorrow} />
           <h2>{exps[1].name}</h2>

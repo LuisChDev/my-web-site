@@ -98,12 +98,7 @@ class App extends Component {
               {DB[language].experience.description}
             </p>
           </TextBox>
-          <div style={{
-            width: "50vw",
-            maxHeight: "50vh"
-          }}>
             <ExpSlider lang={language} />
-          </div>
         </Section>
 
         {/* <Section> */}
