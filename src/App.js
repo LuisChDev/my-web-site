@@ -4,28 +4,28 @@
  * @author Luis Chavarriaga
  * @license MIT
  */
-import React, { Component } from 'react';
-import smoothscroll from 'smoothscroll-polyfill';
+import React, { Component } from "react";
+import smoothscroll from "smoothscroll-polyfill";
 
 // data.
-import {DB} from './database.js';
+import { DB } from "./database.js";
 
 // components.
-import Section from './Section/Section.js';
-import Navbar from './Navbar/Navbar.js';
-import VideoPlayer from './VideoPlayer/videoPlayer.js';
-import TextBox from './TextBox/textBox.js';
-import Game from './Game/Game.js';
-import Catalog from './Catalog/Catalog.js';
-import ButtonBlock from './ButtonBlock/ButtonBlock.js';
-import Warning from './Warning/Warning.js';
-import ExpSlider from './ExpSlider';
+import Section from "./Section/Section.js";
+import Navbar from "./Navbar/Navbar.js";
+import VideoPlayer from "./VideoPlayer/videoPlayer.js";
+import TextBox from "./TextBox/textBox.js";
+import Game from "./Game/Game.js";
+import Catalog from "./Catalog/Catalog.js";
+import ButtonBlock from "./ButtonBlock/ButtonBlock.js";
+import Warning from "./Warning/Warning.js";
+import ExpSlider from "./ExpSlider";
 
 // Routing.
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
 // styles.
-import {sections, socialMediaButtons, langs} from './style.js';
+import { sections, socialMediaButtons, langs } from "./style.js";
 
 //initialize the polyfill.
 smoothscroll.polyfill();
@@ -46,43 +46,44 @@ class App extends Component {
   }
 
   render() {
-    let {curSec, language} = this.state;
+    let { curSec, language } = this.state;
 
     return (
-      <Router>
+      <>
         <Navbar
-          items={[...sections]} langs={langs} text={DB[language].navbar}
-          handleLang={(lang) => this.handleLang(lang)}/>
+          items={[...sections]}
+          langs={langs}
+          text={DB[language].navbar}
+          handleLang={(lang) => this.handleLang(lang)}
+        />
 
-        <Section itemId="home" open={curSec==="home"}>
+        <Section itemId="home" open={curSec === "home"}>
           {/*welcome screen*/}
-          <VideoPlayer bkg={false}/>
-          <VideoPlayer bkg/>
+          <VideoPlayer bkg={false} />
+          <VideoPlayer bkg />
           <TextBox>
             <h2>{DB[language].home.title}</h2>
-            <p dangerouslySetInnerHTML={{__html: DB[language].home.body}}/>
+            <p dangerouslySetInnerHTML={{ __html: DB[language].home.body }} />
           </TextBox>
         </Section>
 
         <Section itemId="game" adjusted>
           {/* game section */}
           <Warning>
-            <h1>
-              {DB[language].skills.warning}
-            </h1>
+            <h1>{DB[language].skills.warning}</h1>
           </Warning>
-          <Game instructions={DB[language].skills.title}
-                mobile={DB[language].skills.mobile}/>
+          <Game
+            instructions={DB[language].skills.title}
+            mobile={DB[language].skills.mobile}
+          />
         </Section>
 
-        <Section itemId="skills" open={curSec==="skills"}>
+        <Section itemId="skills" open={curSec === "skills"}>
           {/*skills section*/}
           <TextBox>
             <h2>{DB[language].projects.title}</h2>
             {/* <p dangerouslySetInnerHTML={{__html: DB[language].projects.body}}/> */}
-            <p>
-              {DB[language].projects.body}
-            </p>
+            <p>{DB[language].projects.body}</p>
           </TextBox>
           <Catalog
             skills={DB[language].skillList}
@@ -90,32 +91,36 @@ class App extends Component {
           />
         </Section>
 
-        <Section itemId="experience" open={curSec==="experience"}>
+        <Section itemId="experience" open={curSec === "experience"}>
           {/* experience section */}
           <TextBox>
             <h2>{DB[language].experience.title}</h2>
-            <p>
-              {DB[language].experience.description}
-            </p>
+            <p>{DB[language].experience.description}</p>
           </TextBox>
-            <ExpSlider lang={language} />
+          <ExpSlider lang={language} />
         </Section>
 
         {/* <Section> */}
         {/*   {/\* projects section *\/} */}
         {/* </Section> */}
 
-        <Section itemId="contact" open={curSec==="contact"}>
+        <Section itemId="contact" open={curSec === "contact"}>
           {/*contact me section*/}
           <TextBox>
             <h2>{DB[language].contact.title}</h2>
-            <p dangerouslySetInnerHTML={{__html: DB[language].contact.body}}/>
+            <p
+              dangerouslySetInnerHTML={{ __html: DB[language].contact.body }}
+            />
           </TextBox>
-          <ButtonBlock buttons={socialMediaButtons} open={curSec==="contact"}/>
-          <a href="/secret" style={{marginLeft: "30px"}}>!</a>
-
+          <ButtonBlock
+            buttons={socialMediaButtons}
+            open={curSec === "contact"}
+          />
+          <a href="/secret" style={{ marginLeft: "30px" }}>
+            !
+          </a>
         </Section>
-      </Router>
+      </>
     );
   }
 
@@ -127,7 +132,7 @@ class App extends Component {
 
   componentDidMount() {
     const updateState = (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         this.setState({
           curSec: entry.target.id,
         });
@@ -139,7 +144,7 @@ class App extends Component {
       threshold: 0.7,
     });
 
-    sections.forEach(x => {
+    sections.forEach((x) => {
       observer.observe(document.querySelector(`#${x.id}`));
     });
 
@@ -150,7 +155,6 @@ class App extends Component {
       });
     }, 300);
   }
-
 }
 
 /**
@@ -158,20 +162,19 @@ class App extends Component {
  */
 const AppWrap = () => (
   <Router>
-    <Switch>
-      <Route path="/secret">
-        <Router>
-          <h1>Shh!</h1>
-          <p>
-            Esta página secreta está aquí para probar React Router.
-          </p>
-          <a href="/">Regresar</a>
-        </Router>
-      </Route>
-      <Route path="/">
-        <App/>
-      </Route>
-    </Switch>
+    <Routes>
+      <Route
+        path="/secret"
+        element={
+          <>
+            <h1>Shh!</h1>
+            <p>Esta página secreta está aquí para probar React Router.</p>
+            <a href="/">Regresar</a>
+          </>
+        }
+      />
+      <Route path="/" element={<App />} />
+    </Routes>
   </Router>
 );
 

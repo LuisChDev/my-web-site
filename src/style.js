@@ -38,7 +38,7 @@ import gitIcon from "./media/git-icon.png";
 import javascriptIcon from "./media/javascript-icon.png";
 import pythonIcon from "./media/python-icon.png";
 import sqlIcon from "./media/SQL-icon.png";
-import reactIcon from "./media/react-icon.svg";
+import reactIcon from "./media/react-icon.png";
 
 // images for the social media buttons
 import githubIcon from "./media/github-icon.png";
