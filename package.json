@@ -4,20 +4,20 @@
   "private": true,
   "dependencies": {
     "jump.js": "^1.0.2",
-    "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-pose": "^3.3.7",
-    "react-redux": "^5.0.7",
-    "react-responsive-carousel": "^3.2.19",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "2.0.3",
-    "react-scroll": "^1.7.10",
-    "react-scroll-to": "^2.0.2",
-    "react-test-renderer": "^16.6.1",
-    "redux": "^4.0.1",
-    "smoothscroll-polyfill": "^0.4.3",
-    "styled-components": "^4.0.3"
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-pose": "^4.0.10",
+    "react-redux": "^8.0.2",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.7",
+    "react-scroll-to": "^3.0.0-beta.6",
+    "react-test-renderer": "^18.1.0",
+    "redux": "^4.2.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,10 +35,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "babel-plugin-macros": "^2.4.2",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.1",
-    "enzyme-to-json": "^3.3.5",
-    "jest-matcher-one-of": "^1.0.0"
+    "babel-plugin-macros": "^3.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "jest-matcher-one-of": "^1.0.2"
   }
 }
