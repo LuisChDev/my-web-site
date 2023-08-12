@@ -57,6 +57,10 @@ your next hit website.`,
         {
           name: "Tomorrow Tech S.A.S.",
           description: "Responsive Web development & SPAs. API integration. Client-facing work and communication.",
+        },
+        {
+          name: "Encora Digital LLC",
+          description: "UI component development on web apps. Worked on international teams."
         }
       ],
     },
