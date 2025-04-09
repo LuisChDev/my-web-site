@@ -47,7 +47,7 @@ class Catalog extends Component {
     let {skills} = this.props;
     let {activeKey, turns} = this.state;
 
-    // proper modulus funcion since javascript's sucks ass
+    // proper modulus funcion
     function properMod(modulus, numb) {
       if (numb >= 0) {
         return numb%modulus;
